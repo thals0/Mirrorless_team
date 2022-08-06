@@ -1,0 +1,73 @@
+@import "reset";
+
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+// font-family: "Bangers", cursive;
+
+:root {
+  // color
+  --color-addbtn: #ff6602;
+  // --color-addbtn: #f3eee1;
+  --color-slide: #f3eee1;
+  // --color-slide: #ff6602;
+  --color-font: #dfdfdf;
+  --color-font: #000;
+  --color-btnFont: #fff;
+}
+/* Common */
+body {
+  font: 16px/1 "Bangers";
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  &.camcoder {
+    overflow: hidden;
+  }
+
+  &.version2,
+  &.all {
+    overflow: scroll;
+  }
+}
+
+/* Header */
+header {
+  position: fixed;
+  z-index: 4;
+  background-color: #fff;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dfdfdf;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    a.name {
+      color: black;
+      font-size: 40px;
+    }
+    a.icon {
+      margin-left: 8px;
+      font-size: 30px;
+    }
+  }
+  nav {
+    ul {
+      display: flex;
+      li {
+        margin: 0px 16px;
+        cursor: pointer;
+        a {
+          color: black;
+        }
+      }
+    }
+  }
+}
+@import "product";
+@import "section";
+@import "details";
