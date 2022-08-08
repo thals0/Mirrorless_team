@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/8924a45e02.js" crossorigin="anonymous"></script>
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/store/style.css">
+
+  <!-- JS -->
+  <script defer src="./js/main.js"></script>
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Header</title>
+</head>
+
+<body class="all">
+  <header>
+    <div class="logo">
+      <a href="#" class="name">Mirrorless </a>
+      <!-- <a href="javascript:controlAutoplay();" class="icon">📸</a> -->
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <select name="product" id="" onchange="window.open(this.value,'_self');">
+            <option value="all.html" selected>All</option>
+            <option value="General">General</option>
+            <option value="Film Camera">Film Camera</option>
+            <option value="Camcoder.html">Camcoder</option>
+            </optgroup>
+          </select>
+        </li>
+        <li><a href="#">New Product</a></li>
+        <li><a href="#">Film Map</a></li>
+        <li><a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+</body>
+
+</html>

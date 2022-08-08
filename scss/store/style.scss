@@ -3,6 +3,8 @@
 /* Font */
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 // font-family: "Bangers", cursive;
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
+// font-family: 'Racing Sans One', cursive;
 
 :root {
   // color
@@ -16,7 +18,7 @@
 }
 /* Common */
 body {
-  font: 16px/1 "Bangers";
+  font: 16px/1 "Racing Sans One";
   width: 100%;
   height: 100vh;
   position: relative;
