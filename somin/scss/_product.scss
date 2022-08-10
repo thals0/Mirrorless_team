@@ -1,0 +1,117 @@
+/* Product */
+.product {
+  width: 100%;
+  height: 600px;
+  // top: -88%;
+  // position: relative;
+  // overflow: hidden;
+  transition: height 0.4s;
+  transition: 1.4s;
+
+  &.on {
+    opacity: 0;
+  }
+
+  // h2 {
+  //   position: absolute;
+  //   top: 10px;
+  //   margin-left: 40px;
+  //   font: bold 28px/1 "airal";
+  // }
+
+  .swiper {
+    cursor: pointer;
+    overflow: visible;
+    width: 20vw;
+    height: 70vh;
+    text-align: center;
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .swiper-wrapper {
+      .swiper-slide {
+        // background-color: var(--color-slide);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        transition: 0.4s;
+
+        &:hover {
+          background-color: var(--color-slide);
+          box-shadow: 5px 5px 10px rgba($color: #f6f6f6, $alpha: 0.9);
+
+          .name,
+          .add-cart {
+            opacity: 1;
+          }
+
+          img {
+            transform: scale(1.8);
+            // box-shadow: 5px 5px 10px rgba($color: #333, $alpha: 0.8);
+          }
+        }
+
+        .name {
+          display: block;
+          margin: 20px 0 10px 20px;
+          text-align: left;
+          font-size: 18px;
+          letter-spacing: 2px;
+          color: var(--color-font);
+          opacity: 0;
+          transition: 0.8s;
+        }
+
+        img {
+          width: 100%;
+          transition: 0.8s;
+        }
+        img.general {
+          width: 75%;
+          margin: 0px auto;
+          transition: 0.8s;
+        }
+        img.film {
+          width: 120%;
+          transition: 0.8s;
+        }
+
+        .add-cart {
+          transition: 0.8s;
+          opacity: 0;
+          margin: 25px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          bottom: 0px;
+
+          .price {
+            color: var(--color-font);
+
+            span {
+              font-size: 16px;
+              opacity: 0.6;
+            }
+            strong {
+              font-size: 32px;
+              opacity: 1;
+            }
+          }
+          a {
+            width: 40px;
+            height: 40px;
+            background-color: var(--color-addbtn);
+            border-radius: 5px;
+            font-size: 20px;
+            line-height: 40px;
+            color: var(--color-btnFont);
+            box-shadow: 5px 5px 10px rgba($color: #ff6602, $alpha: 0.2);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle&family=Gowun+Dodum&family=IBM+Plex+Sans+KR&family=Noto+Sans+KR:wght@500&display=swap");
+/* font-family: 'Dongle', sans-serif;
+font-family: 'Gowun Dodum', sans-serif;
+font-family: 'IBM Plex Sans KR', sans-serif;
+font-family: 'Noto Sans KR', sans-serif; */
+
+.customoverlay {
+  position: relative;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  border-bottom: 2px solid #ddd;
+  float: left;
+}
+.customoverlay:nth-of-type(n) {
+  border: 0;
+  box-shadow: 0px 1px 2px #888;
+}
+.customoverlay a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  overflow: hidden;
+  background: #ff6602;
+  background: #ff6602
+    url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png)
+    no-repeat right 14px center;
+}
+.customoverlay .title {
+  display: block;
+  text-align: center;
+  background: #f3eee1;
+  margin-right: 35px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  width: 120px;
+}
+/* .customoverlay:after {content:'';position:absolute;margin-left:-12px;left:50%;bottom:-12px;width:22px;height:12px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')} */
+
+body {
+  padding: 0px 200px;
+}
+section > h1 {
+  margin-bottom: 20px;
+  font-family: "IBM Plex Sans KR";
+  font-size: 35px;
+}
+.topContent p {
+  font-size: 16px;
+}
+.input-contain {
+  display: flex;
+}
+.maplist {
+  position: absolute;
+  z-index: 90;
+  width: 185px;
+  height: 300px;
+  top: 35%;
+  background-color: orange;
+  border: 1px solid black;
+}
+.maplist div {
+  width: 185px;
+  height: 50px;
+}
+.maphover {
+  background-color: skyblue;
+}
+.input-contain > div {
+  margin-right: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.input {
+  position: relative;
+  width: 260px;
+  height: 30px;
+  border-bottom: 3px solid gray;
+  margin-bottom: 20px;
+}
+.input i {
+  position: absolute;
+  right: 2%;
+  top: 20%;
+}
+.kakao {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+.kakao #map {
+  width: 100%;
+  height: 70%;
+}
+.shopcontainer {
+  position: relative;
+  width: 100%;
+}
+.shopcontainer h1 {
+  margin-bottom: 30px;
+  font-family: "IBM Plex Sans KR";
+  font-size: 35px;
+}
+.shop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.shop .shop_1 {
+}
+.shop .shop_1 a {
+}
+.shop .shop_1 a img {
+  width: 20vw;
+  height: 20vh;
+}
+.shop .shop_1 .shop__content {
+  width: 20vw;
+  height: 25vh;
+}
+.shop .shop_1 .shop__content h4 {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-family: "Noto Sans KR";
+}
+.shop .shop_1 .shop__content p {
+  font-size: 14px;
+  font-family: "Noto Sans KR";
+}
