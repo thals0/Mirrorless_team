@@ -193,3 +193,14 @@ function makeOverListener(map, marker, infowindow) {
 //         infowindow.close();
 //     };
 // }
+
+let maplistContent = document.querySelectorAll(".maplist div");
+
+for(let i =0; i<maplistContent.length;i++){
+    maplistContent[i].addEventListener("mouseover",function(e){
+        e.currentTarget.classList.add("maphover");
+    })
+    maplistContent[i].addEventListener("mouseout",function(e){
+        e.currentTarget.classList.remove("maphover");
+    })
+}
