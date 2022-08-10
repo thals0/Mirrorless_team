@@ -1,0 +1,185 @@
+@import "reset";
+
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+// font-family: "Bangers", cursive;
+// font-family: 'Racing Sans One', cursive;
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
+:root {
+  // color
+  --color-addbtn: #ff6602;
+  // --color-addbtn: #fec44c;
+  // --color-addbtn: #f3eee1;
+  // --color-slide: #f3eee1;
+  // --color-slide: #ff6602;
+  --color-slide: #f6f6f6;
+  --color-font: #dfdfdf;
+  --color-font: #000;
+  --color-btnFont: #fff;
+  --color-btn: #e9e9e9;
+}
+/* Common */
+body {
+  font: 16px/1 "Racing Sans One";
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  &.per_product {
+    overflow: hidden;
+  }
+
+  &.version2,
+  &.all {
+    overflow: scroll;
+  }
+}
+
+/* Header */
+header {
+  &.on {
+    display: none;
+  }
+  .main_header {
+    z-index: 4;
+    // background-color: #fff;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dfdfdf;
+    transition: 1.4s;
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      a.name {
+        color: black;
+        font-size: 40px;
+      }
+      a.icon {
+        margin-left: 8px;
+        font-size: 30px;
+      }
+    }
+    nav {
+      ul {
+        display: flex;
+        li {
+          margin: 0px 16px;
+          cursor: pointer;
+          a {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+  #bars {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+    width: 370px;
+    height: 100%;
+    margin-left: auto;
+
+    font-size: 22px;
+    // text-align: center;
+
+    top: 0%;
+    right: 0%;
+
+    .sub_menu {
+      border: 1px solid #000;
+
+      li {
+        padding: 18px 12px;
+        transition: 0.5s;
+
+        &:hover {
+          background-color: #f6f6f6;
+        }
+
+        a {
+          i {
+            margin: 8px;
+            &.fa-angle-down {
+              margin-left: 170px;
+            }
+          }
+          color: #000;
+        }
+
+        .icon {
+          text-align: center;
+        }
+      }
+
+      .sub_product {
+        display: none;
+        &.active {
+          display: block;
+        }
+        li {
+          font-size: 14px;
+          // margin: 12px 0px 0px 30px;
+          // padding: 8px 12px;
+          padding: 12px 12px 12px 42px;
+        }
+      }
+    }
+  }
+}
+
+/* Header */
+// header {
+//   position: fixed;
+//   z-index: 4;
+//   background-color: #fff;
+//   width: 100%;
+//   padding: 20px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   border-bottom: 1px solid #dfdfdf;
+//   transition: 1.4s;
+
+//   &.on {
+//     opacity: 0;
+//   }
+
+//   .logo {
+//     display: flex;
+//     align-items: center;
+//     a.name {
+//       color: black;
+//       font-size: 40px;
+//     }
+//     a.icon {
+//       margin-left: 8px;
+//       font-size: 30px;
+//     }
+//   }
+//   nav {
+//     ul {
+//       display: flex;
+//       li {
+//         margin: 0px 16px;
+//         cursor: pointer;
+//         a {
+//           color: black;
+//         }
+//       }
+//     }
+//   }
+// }
+
+@import "product";
+@import "all";
+@import "details";
+@import "btn";
