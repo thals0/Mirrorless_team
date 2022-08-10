@@ -1,0 +1,396 @@
+@import "reset";
+@import "footer";
+
+// Font
+// font-family: 'Bangers', cursive;
+// font-family: 'Racing Sans One', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+
+:root {
+  /* color */
+  --color-deep-black: #111;
+  --color-black: #3f454d;
+  --color-white: #fff;
+  --color-blue: #A6D1E6;
+  --color-yellow: #FFC54D;
+  --color-pink: #FF869E;
+  --color-grey: rgb(149, 146, 146);
+  --color-light-grey: #dfdfdf;
+  --color-dd: #f3eee1;
+  --color-orange: #ff6602;
+}
+
+/*Detail*/
+.details_page {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  font-family: "Racing Sans One";
+  top: 0px;
+  left: 0px;
+
+  /*expand*/
+  .expand {
+    width: 40%;
+    height: 1000px;
+    background-color: #e9e9e9;
+    position: relative;
+    transition: 1.4s;
+
+    .name {
+      display: block;
+      margin: 60px;
+      font-size: 30px;
+      letter-spacing: 1px;
+      transition: 0.4s;
+    }
+    .bgimg{
+      position: absolute;
+      left: 2vw;
+      display: inline-block;
+      color: var(--color-orange);
+      opacity: .65;
+      font: normal 300px/1 "Racing Sans One";
+    }
+    .img {
+      position: fixed;
+      top: 20vh;
+      left: 8%;
+      bottom: 20%;
+      width: 50vw;
+      height: 100vw;
+      z-index: 1;
+
+        img {
+          width: 75%;
+          z-index: 1;
+          margin-left: 10vw;
+        }
+      }
+    .add-cart {
+      // margin: 25px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 24vw;
+
+      .price {
+        position: fixed;
+        top: 82vh;
+        left: 5vw;
+        span {
+          font-size: 22px;
+        }
+        strong {
+          font-size: 32px;
+        }
+      }
+      a {
+        position: fixed;
+        top: 84vh;
+        left: 28vw;
+        cursor: pointer;
+        width: 120px;
+        height: 40px;
+        background-color: #000;
+        // background-color: #fec44c;
+        border-radius: 5px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        box-shadow: 5px 5px 10px rgba($color: #000, $alpha: 0.2);
+      }
+    }
+  }
+
+  /*details*/
+  .details {
+    position: relative;
+    font: normal 14px/1 "arial";
+    width: 60%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .bgimg{
+      position: absolute;
+      top: 25vh;
+      left: 1vw;
+      display: inline-block;
+      color: #c8c8c8;
+      opacity: .65;
+      font: normal 300px/1 "Racing Sans One";
+    }
+
+    .inner {
+      position: absolute;
+      top: 5vh;
+      margin-left: 12vw;
+      width: 30vw;
+
+      >div {
+        margin: 40px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .title {
+        font: bolder 18px/1 "airal";
+      }
+
+      .diy {
+        cursor: pointer;
+        padding: 12px;
+        border: 1px solid #000;
+      }
+
+      .more {
+        display: none;
+        font: normal 12px/1 "airal";
+      }
+
+      .num {
+        padding-right: 40px;
+        align-items: center;
+        height: 7vh;
+
+        .count {
+          display: flex;
+          align-items: center;
+
+          a {
+            cursor: pointer;
+            color: #000;
+            font-size: 26px;
+            opacity: 0.7;
+          }
+
+          span {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            margin: 0px 8px;
+          }
+        }
+      }
+
+      .color{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .inputbox{
+          width: 16.9vw;
+          height: 4vh;
+          outline: none;
+          font-size: 16px;
+          padding: 0 10px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+          box-sizing: border-box;
+          background-color: #fff;
+          box-sizing: border-box;
+
+          &:focus{
+            outline-color: #ff6602;  
+          }
+        }
+        .color_select{
+          justify-content: center;
+          margin-top: 4vh;
+          width: 100%;
+          height: 7vh;
+          .color_each{
+            margin-right: 15px;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            border: 2px double #555;
+            transition: .5s;
+
+            &:nth-child(1){
+              background-color: rgb(243, 105, 105);
+            }
+            &:nth-child(2){
+              background-color: rgb(255, 188, 63);
+            }
+            &:nth-child(3){
+              background-color: rgb(255, 255, 136);
+            }
+            &:nth-child(4){
+              background-color: rgb(109, 162, 109);
+            }
+            &:nth-child(5){
+              background-color: rgb(85, 173, 216);
+            }
+            &:nth-child(6){
+              background-color: rgb(49, 49, 89);
+            }
+            &:nth-child(7){
+              background-color: rgb(186, 137, 186);
+            }
+            &:nth-child(8){
+              background-color: rgb(64, 64, 64);
+            }
+
+            &:hover{
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+
+      .emoji{
+        display: flex;
+        flex-direction: column;
+        .inputbox{
+          width: 15.9vw;
+          height: 4vh;
+          outline: none;
+          font-size: 16px;
+          padding: 0 10px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+          box-sizing: border-box;
+          background-color: #fff;
+          box-sizing: border-box;
+
+          &:focus{
+            outline-color: #ff6602;  
+          }
+        }
+        .emoji_select{
+          justify-content: center;
+          margin-top: 4vh;
+          width: 100%;
+          height: 7vh;
+          .emoji_each{
+            margin-right: 15px;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            transition: .5s;
+
+            &:hover{
+              transform: scale(1.3);
+            }
+          }
+        }
+      }
+      .cart {
+        margin-bottom: 0px;
+        display: flex;
+        height: 7vh;
+
+        span {
+          border-radius: 2px;
+          text-align: center;
+          line-height: 50px;
+          width: 135px;
+          height: 50px;
+          border: 1px solid #000;
+          // background-color: #fff;
+
+          &.item3 {
+            width: 60px;
+            background-color: #000;
+            color: #fff;
+          }
+        }
+      }
+
+      .buy {
+        border-radius: 1px;
+        margin: 1vh 5.5vh 0 5.5vh;
+        display: block;
+        height: 7vh;
+        // background-color: #fff;
+        border: 1px solid #000;
+        text-align: center;
+        line-height: 50px;
+      }
+
+      .naver {
+        border-top: 2px solid #000;
+        padding: 1.5vh;
+        margin-left: 1.5vh 0;
+        width: 83%;
+        height: 7vh;
+        display: flex;
+
+        .logo_item {
+          padding-top: .8vh 0;
+          font-size: 10px;
+          height: 5vh;
+
+          .logo {
+            color: #1fcd63;
+            font-weight: bolder;
+          }
+        }
+
+        .npay {
+          width: 150px;
+          height: 5vh;
+          text-align: center;
+          line-height: 37px;
+          margin-left: 5vh;
+          border: 1px solid #777;
+          background-color: #1fcd63;
+          color: #fff;
+        }
+
+        .get {
+          width: 7vh;
+          height: 5vh;
+          padding: 1vh;
+          text-align: center;
+          
+          line-height: 22px;
+          color: #1fcd63;
+          border: 1px solid #777;
+          background-color: #fff;
+        }
+      }
+
+      .nav_more {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+
+        ul {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+
+          li {
+            padding-right: 18px;
+
+            &:not(:last-child) {
+              border-right: 1px solid #666;
+            }
+          }
+        }
+      }
+
+    }
+  }
+  footer{
+    position: absolute;
+    top: 900px;
+    width: 100%;
+  }
+}
