@@ -1,0 +1,550 @@
+@charset "utf-8";
+@import "reset";
+
+
+// Font
+// font-family: 'Bangers', cursive;
+// font-family: 'Racing Sans One', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+
+:root {
+  /* color */
+  --color-deep-black: #111;
+  --color-black: #3f454d;
+  --color-white: #fff;
+  --color-blue: #A6D1E6;
+  --color-yellow: #FFC54D;
+  --color-pink: #FF869E;
+  --color-grey: rgb(149, 146, 146);
+  --color-light-grey: #dfdfdf;
+  --color-dd: #f3eee1;
+  --color-orange:#ff6602;
+}
+
+body {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+}
+
+section.up {
+  position: absolute;
+  /*MAIN TITLE과 FILM CAMERA*/
+  .main {
+    display: flex;
+
+    /*main title*/
+    .titleImg {
+      width: 50vw;
+      height: 100vh;
+      background-image: url(/img/main/bgi_grid.png);
+      background-size: 500px;
+      border: 1px solid #c8c8c8;
+      position: relative;
+
+      .leftbox{
+        width: 7vw;
+        height: 100vh;
+        background-color: var(--color-deep-black);
+        position: relative;
+        top: 0;
+        left: 0;
+        span{
+          font: 50px/1 "Bangers";
+          color: var(--color-white);
+          text-align: center;
+          display: block;
+          padding: 2vh;
+        }
+        .menubar{
+          font: 30px/1 "arial";
+          position: absolute;
+          bottom: 20px;
+          left: 25px;
+          cursor: pointer;
+          }
+
+          &.on{
+            position: absolute;
+            top: 0vw;
+            left: 0vh;
+            background-color: var(--color-deep-black);
+            width: 18vw;
+            height: 100vh;
+            i{
+              display: none;
+            }
+            .leftbox{
+              position: absolute;
+              top: 20vw;
+            }
+          }
+        }
+      }
+
+      .mainbox {
+        font: 140px/.4 "Racing Sans One";
+        position: absolute;
+        top: 25vh;
+        left: 10vw;
+        z-index: 100;
+        color: #ff6602;
+        text-shadow: 4px 4px 4px rgba($color: #777777, $alpha: .3);
+
+        span {
+          font: 35px/1 "arial";
+          letter-spacing: 1px;
+        }
+        .btn{
+          position: absolute;
+          top: 27vh;
+          font: 20px/1 "arial";
+          background-color: var(--color-deep-black);
+          color: var(--color-white);
+          border-radius: 4px;
+          padding: 7px;
+          box-shadow: 4px 4px 4px rgba($color: #777777, $alpha: .3);
+        }
+      }
+    }
+
+    /*main film imgs*/
+    .subImg {
+      display: flex;
+      width: 50vw;
+      height: 100vh;
+      overflow: hidden;
+
+      .firstImg,
+      .secondImg,
+      .thirdImg {
+        width: 17vw;
+        height: 170vh;
+        // transition: 5s;
+      }
+
+      .firstImg {
+        transform-origin: (700px center);
+        transform: translate(0, 0); //-590
+        // transition: 6s;
+        animation: motion1 linear 4s infinite;
+      }
+
+      .secondImg {
+        transform-origin: (480px center);
+        transform: translate(0, 0);
+        // transition: 6s;
+        animation: motion2 linear 4s infinite;
+      }
+
+      .thirdImg {
+        transform-origin: (right center);
+        transform: translate(0, 0);
+        // transition: 6s;
+        animation: motion3 linear 4s infinite;
+      }
+    }
+  }
+
+  /*SHOP*/
+  .types {
+    margin-top: 20px;
+    transition: 2s;
+    text-align: center;
+
+    .title {
+      display: block;
+      font: 40px/1 "Racing Sans One";
+      margin-top: 35px;
+      text-shadow: 4px 4px 4px rgba($color: #777777, $alpha: .3);
+      span{
+        color: #ff6602;
+        text-shadow: 4px 4px 4px rgba($color: #ff6602, $alpha: .3);
+      }
+    }
+
+    .typeimg {
+      display: flex;
+      div {
+        transition: 1.5s;
+        justify-content: center;
+        a {
+          color: var(--color-black);
+          img {
+            // width: 250px;
+            width: 20vw;
+            position: relative;
+          }
+          span {
+            font: 500 20px/1 "arial";
+          }
+        }
+        &:hover {
+          transform: scale(1.2);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  // .abc{
+  //   width: 100%;
+  //   height: 100px;
+  //   background-color: #c8c8c8;
+  // }
+  /*이미지s*/
+  .sub_part {
+    width: 100%;
+    // height: 100;
+    padding-top: 150px;
+    position: relative; 
+
+    .title {
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      display: block;
+      margin: auto;
+      font-size: 40px;
+      font-family: 'Racing Sans One', cursive;
+      justify-content: center;
+      margin-bottom: 5vh;
+      text-shadow: 4px 4px 4px rgba($color: #777777, $alpha: .3);
+    }
+
+    .firstImgs {
+      position: absolute;
+      top: 130px;
+      left: 0px;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      transition: .4s;
+
+      img {
+        display: block;
+        width: 230px;
+        height: 300px;
+        background-color: var(--color-test);
+        margin-right: 60px;
+        transition: .4s;
+
+        &:hover {
+          transform: scale(1.2);
+          cursor: pointer;
+          body{
+            background-color: rgb(51, 51, 51, .5);
+          }
+        }
+
+        &:last-child{
+          &:hover{
+            &:hover{
+              transform: scale(1.05);
+              cursor: pointer;            
+            }
+          }
+        }
+      }
+
+      img:last-child {
+        margin: 0;
+      }
+    }
+
+    // .firstImg_inner{
+    //   position: absolute;
+    //   top: 20vh;
+    //   left: 0px;
+    // }
+
+    .secondImgs {
+      position: absolute;
+      top: 430px;
+      left: 0px;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      img {
+        display: block;
+        width: 350px;
+        height: 450px;
+        margin: 40px 17px 0 0;
+        transition: .4s;
+
+        &:nth-child(2){
+          width: 425px;
+          height: 450px;
+          margin: 40px 0px 0 17px;
+        }
+
+        &:hover {
+          transform: scale(1) translate(0, -5px);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  footer {
+    position: absolute;
+    top: 2100px;
+    width: 100%;
+    padding: 4vh 0 1vh 0;
+    margin-top: 6vh;
+    background-color: #333;
+    color: #fff;
+
+    .inner {
+      .agreement {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        li {
+          font: 10px/1 "arial";
+          justify-content: center;
+          padding: 10px;
+
+          &:last-child {
+            margin-right: none;
+          }
+
+          &:not(:nth-child(1))::before {
+            content: "|";
+            color: #c8c8c8;
+            margin-right: 10px;
+          }
+
+          a {
+            color: #c8c8c8;
+
+            &:hover {
+              text-decoration: underline;
+            }
+
+          }
+        }
+      }
+
+      .btns {
+        display: flex;
+        margin-top: 1.5vh;
+        justify-content: center;
+
+        li {
+          font: 10px/1 "arial";
+
+          a {
+            text-align: center;
+            display: block;
+            width: 100px;
+            color: #fff;
+            padding: .7vh;
+            border: 1px solid #fff;
+            border-radius: 3px;
+            margin-left: 30px;
+
+            &:hover {
+              background-color: #fff;
+              color: #333;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      .company_contents {
+        display: flex;
+        font: 10px/1 "arial";
+        padding: 3vh 0 0 0;
+        justify-content: center;
+        color: #c8c8c8;
+
+        li {
+          margin-left: 20px;
+
+          &:last-child {
+            margin-left: none;
+          }
+        }
+      }
+
+      p {
+        padding: 2vh 0;
+        font: 10px/1 "arial";
+        margin-left: 10px;
+        text-align: center;
+        color: #c8c8c8;
+      }
+    }
+
+  }
+
+
+@keyframes motion1 {
+  0% {
+    transform: translateY(-500px) scale(1.5);
+  }
+
+  5% {
+    transform: translateY(-500px) scale(1.5);
+  }
+
+  10% {
+    transform: translateY(-400px) scale(1.4);
+  }
+
+  20% {
+    transform: translateY(-300px) scale(1.3);
+  }
+
+  30% {
+    transform: translateY(-200px) scale(1.2);
+  }
+
+  40% {
+    transform: translateY(-100px) scale(1.1);
+  }
+
+  50% {
+    transform: translateY(0px) scale(1);
+  }
+
+  60% {
+    transform: translateY(0px) scale(1);
+  }
+
+  75% {
+    transform: translateY(-250px) scale(1);
+  }
+
+  90% {
+    transform: translateY(-500px) scale(1);
+  }
+
+  100% {
+    transform: translateY(-500px) scale(1);
+  }
+}
+
+@keyframes motion2 {
+  0% {
+    transform: translateY(0px) scale(1.5);
+  }
+
+  5% {
+    transform: translateY(0px) scale(1.5);
+  }
+
+  10% {
+    transform: translateY(-100px) scale(1.4);
+  }
+
+  20% {
+    transform: translateY(-200px) scale(1.3);
+  }
+
+  30% {
+    transform: translateY(-300px) scale(1.2);
+  }
+
+  40% {
+    transform: translateY(-400px) scale(1.1);
+  }
+
+  50% {
+    transform: translateY(-500px) scale(1);
+  }
+
+  60% {
+    transform: translateY(-500px) scale(1);
+  }
+
+  75% {
+    transform: translateY(-250px) scale(1);
+  }
+
+  90% {
+    transform: translateY(0px) scale(1);
+  }
+
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+
+@keyframes motion3 {
+  0% {
+    transform: translateY(-500px) scale(1.5);
+  }
+
+  5% {
+    transform: translateY(-500px) scale(1.5);
+  }
+
+  10% {
+    transform: translateY(-400px) scale(1.4);
+  }
+
+  20% {
+    transform: translateY(-300px) scale(1.3);
+  }
+
+  30% {
+    transform: translateY(-200px) scale(1.2);
+  }
+
+  40% {
+    transform: translateY(-100px) scale(1.1);
+  }
+
+  50% {
+    transform: translateY(0px) scale(1);
+  }
+
+  60% {
+    transform: translateY(0px) scale(1);
+  }
+
+  75% {
+    transform: translateY(-250px) scale(1);
+  }
+
+  90% {
+    transform: translateY(-500px) scale(1);
+  }
+
+  100% {
+    transform: translateY(-500px) scale(1);
+  }
+}
+
+// .sub_part2{
+//   width: 100%;
+//   // height: 100;
+//   padding-top: 150px;
+
+//   .title2 {
+//     display: block;
+//     margin: auto;
+//     font-size: 40px;
+//     font-family: 'Bangers', cursive;
+//     text-align: center;
+//     margin-bottom: 5vh;
+//   }
+
+//   .firstImg2{
+//     width: 230px;
+//     height: 300px;
+//     background-image: url(/img/mainImg/main2-1-1.jpeg);
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     background-color: pink;
+//   }
+// }
