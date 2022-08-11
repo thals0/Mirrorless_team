@@ -98,14 +98,14 @@ h1 {
   // left: 0;
   z-index: 3;
 
-  // .filmcamera{
-  //   color: var(--color-white);
-  // }
-  // span{
-  //   strong{
-  //     color: #ff6602;
-  //   }
-  // }
+  .filmcamera{
+    color: var(--color-white);
+  }
+  span{
+    strong{
+      color: #ff6602;
+    }
+  }
 }
 @media (min-width: 419px) {
   h1 {

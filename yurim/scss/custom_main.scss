@@ -49,7 +49,7 @@ header {
     top: 3vh;
     right: 2vw;
     font-size: 20px;
-    color: var( --color-black);
+    color: var( --color-white);
   }
 }
 
@@ -113,6 +113,7 @@ header {
         left: 50%;
         transform: translate(-50%, 0);
         width: 20vw;
+        transition: 1s;
 
         &:hover{
           background-color: var(--color-white);

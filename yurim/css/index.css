@@ -6,9 +6,7 @@
   padding: 0;
 }
 
-ul,
-ol,
-li {
+ul, ol, li {
   list-style: none;
 }
 
@@ -21,9 +19,9 @@ a {
   --color-deep-black: #111;
   --color-black: #3f454d;
   --color-white: #fff;
-  --color-blue: #a6d1e6;
-  --color-yellow: #ffc54d;
-  --color-pink: #ff869e;
+  --color-blue: #A6D1E6;
+  --color-yellow: #FFC54D;
+  --color-pink: #FF869E;
   --color-grey: rgb(149, 146, 146);
   --color-light-grey: #dfdfdf;
   --color-dd: #f3eee1;
@@ -62,7 +60,7 @@ section.up .main .titleImg .leftbox {
   left: 0;
 }
 section.up .main .titleImg .leftbox span {
-  font: 50px/1 "Bangers";
+  font: 50px/1 "Racing Sans One";
   color: var(--color-white);
   text-align: center;
   display: block;
@@ -179,15 +177,77 @@ section.up .subImg .thirdImg {
   cursor: pointer;
 }
 
+/*custom page 요약*/
+.custom {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+.custom .bg {
+  width: 100%;
+  background-color: var(--color-deep-black);
+}
+.custom .bg h3 {
+  color: var(--color-orange);
+  font: 40px/1 "Racing Sans One";
+  text-align: center;
+  align-items: center;
+  padding: 2vh 0;
+  text-shadow: 4px 4px 4px rgba(255, 102, 2, 0.3);
+}
+.custom img {
+  width: 700px;
+  position: absolute;
+  top: -8vh;
+  left: 50vw;
+  transform: translate(-50%, 0);
+  z-index: 3;
+  transition: 4;
+}
+.custom .bgtitle1 {
+  font: 150px/1 "Racing Sans One";
+  color: #c8c8c8;
+  position: absolute;
+  top: 20vh;
+  left: 50vh;
+}
+.custom .bgtitle2 {
+  font: 150px/1 "Racing Sans One";
+  color: #c8c8c8;
+  position: absolute;
+  top: 45vh;
+  left: 100vh;
+}
+.custom .custombtn {
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border-radius: 5px;
+  padding: 1vh;
+  position: absolute;
+  top: 75vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  width: 10vw;
+  transition: 0.5s;
+  cursor: pointer;
+  z-index: 3;
+}
+.custom .custombtn:hover {
+  background-color: var(--color-orange);
+  color: var(--color-deep-black);
+  font-weight: bold;
+}
+
 /*이미지s*/
 .sub_part {
   width: 100%;
-  padding-top: 150px;
+  padding-top: 230px;
   position: relative;
 }
 .sub_part .title {
   position: absolute;
-  top: 50px;
+  top: 14vh;
   left: 50%;
   transform: translate(-50%, 0);
   display: block;
@@ -200,7 +260,7 @@ section.up .subImg .thirdImg {
 }
 .sub_part .firstImgs {
   position: absolute;
-  top: 130px;
+  top: 30vh;
   left: 0px;
   display: flex;
   width: 100%;
@@ -232,7 +292,7 @@ section.up .subImg .thirdImg {
 }
 .sub_part .secondImgs {
   position: absolute;
-  top: 430px;
+  top: 75vh;
   left: 0px;
   display: flex;
   width: 100%;
@@ -258,7 +318,7 @@ section.up .subImg .thirdImg {
 
 footer {
   position: absolute;
-  top: 2100px;
+  top: 385vh;
   width: 100%;
   padding: 4vh 0 1vh 0;
   margin-top: 6vh;
@@ -307,6 +367,7 @@ footer .inner .btns li a {
   border: 1px solid #fff;
   border-radius: 3px;
   margin-left: 30px;
+  transition: 1s;
 }
 footer .inner .btns li a:hover {
   background-color: #fff;

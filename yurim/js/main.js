@@ -1,101 +1,81 @@
 /*main page*/
 
-/*header menu 클릭 시 header menubar 오픈*/
-
-// const headerbar = document.querySelector('.leftbox');
-// let headeron = 0;
-// headerbar.addEventListener('click', () => {
-//   if(headerbar.style.display = 'block'){
-//     headerbar.style.display = 'none';
-//   } else{
-//     headerbar.style.display = 'block';
-//   }
-// })
-
-// headerbar.classList.remove("on");
-
-
-/*types of camera : scroll하면 크기 조정(줄이기)*/
-/*1) 일반 scroll addEventListener로 할 때*/
-const types = document.querySelectorAll('.types');
-
-document.addEventListener("scroll", () => {
-  scrollHeight = window.pageYOffset;
-  console.log(scrollHeight);
-  // console.log(document.getElementsByClassName("typeimg"));
-  const img = document.getElementsByClassName("typeimg");  
-  img[0].style.transform = (scrollHeight >= 130 ? 'scale(0.7)' : '');
-}, false);
-
-/*2) gsap사용할 때*/
+/* 1. types of camera : scroll하면 크기 조정(줄이기)*/
 gsap.to('.typeimg', {
-  scrollTrigger : {
+  scrollTrigger: {
     trigger: '.types',
     toggleActions: 'restart',
   },
-  scale:0.7,
+  scale: 0.7,
   duration: 1.5,
 });
 
-let tl = gsap.timeline();
+// /*2. scroll해서 원하는 article만큼씩 보여주기*/
 
-// /*best sellers : scroll하면 제품만 크기 조정(키우기)*/
-// tl.to('.only_product', {
-//   scrollTrigger : {
-//     trigger: '.sub_part > .title',
-//     toggleActions: 'restart',
-//   },
-//   x:10,
-//   scale:1.2,
-//   duration:1.5,
-// }).from('.only_product', {
-//   scrollTrigger: {
-//     trigger: '.sub_part > .secondImgs',
-//     toggleActions: 'restart',
-//   },
-//   x:-10,
-//   scale:1,
-//   duration:1.5
-// })
+// window.onload = () => {
+//   const elm = document.querySelectorAll('article');
+//   const elmCount = elm.length;
+//   elm.forEach(function (item, index) {
+//     // 2-1. scrollActionBlock : wheel의 원래 scroll되는 기능을 flase시키기
+//     item.addEventListener('mousewheel', e => {
+//       e.preventDefault();
 
+//       let delta = 0;
+
+//       if (!e) e = window.e;
+//       if (e.wheelDelta) {
+//         delta = e.wheelDelta / 120;
+//         console.log(wheelDelta);
+//         if (window.opera) delta = -delta;
+//       } else if (e.detail) delta = -event.detail / 3;
+
+//       let moveTop = window.scrollY;
+//       let elmSelector = elm[index];
+
+//       // wheel down : move to next section
+//       if (delta < 0) {
+//         if (elmSelector !== elmCount - 1) {
+//           try {
+//             moveTop = window.pageYOffset + elmSelector.nextElementSibling.getBoundingClientRect().top;
+//           } catch (e) {}
+//         }
+//       }
+//       // wheel up : move to previous section
+//       else {
+//         if (elmSelector !== 0) {
+//           try {
+//             moveTop = window.pageYOffset + elmSelector.previousElementSibling.getBoundingClientRect().top;
+//           } catch (e) {}
+//         }
+//       }
+
+//       const body = document.querySelector('html');
+//       window.scrollTo({top:moveTop, left:0, behavior:'smooth'});
+//     });
+//   });
+// }
 
 /*custom page*/
 
-/*custom main페이지 카메라 돌아가기*/
+// /*custom main페이지 카메라 돌아가기*/
 let isFirst = -1;
 
-window.addEventListener('load', (e) => {  
-  changeCameraImg();   
+window.addEventListener('load', (e) => {
+  changeCameraImg();
 });
 
 function changeCameraImg() {
-  const customCamera = document.querySelector('article>img');  
-  const cameraNames = ["change1", "change2", "change3", "change4", "change5", "change6", "change7", "change8", "change9", "change10"];
+  const customCamera = document.querySelector('article>img');
+  console.log(customCamera);
+  const cameraNames = ["custom", "custom1", "custom2", "custom3", "custom4", "custom5", "custom6", "custom7", "custom8", "custom9"];
 
-
-  for(i=1; i<11; i++){
-    (function(x){
-      setTimeout(function(){
-        customCamera.setAttribute("src", `../img/custom/${cameraNames[x]}.png`);
-        if(x === 10) changeCameraImg();
-      }, 500*x);
+  for (i = 1; i < 8; i++) {
+    (function (x) {
+      setTimeout(function () {
+        customCamera.setAttribute("src", `../yurim/img/main/${cameraNames[x]}.png`);
+        if (x === 7) changeCameraImg();
+      }, 500 * x);
     })(i);
   }
 }
-
-/*custom sub페이지 +, - 누르면 증감되도록 하기*/
-
-
-/*custom sub페이지 클릭하면 input값에 나타나게하기*/
-const clickevent = document.getElementsByClassName('inputbox');
-console.log(clickevent);
-
-clickevent.addEventListener('click', (e) => {
-  clickevent.innerHTML
-})
-
-
-
-
-
-
+  
