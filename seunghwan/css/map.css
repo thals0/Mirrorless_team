@@ -42,7 +42,7 @@ font-family: 'Noto Sans KR', sans-serif; */
 /* .customoverlay:after {content:'';position:absolute;margin-left:-12px;left:50%;bottom:-12px;width:22px;height:12px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')} */
 
 body {
-  padding: 0px 200px;
+  padding: 0px 150px;
 }
 section > h1 {
   margin-bottom: 20px;
@@ -55,19 +55,17 @@ section > h1 {
 .input-contain {
   display: flex;
 }
-.maplist {
+/* .maplist {
   position: absolute;
   z-index: 90;
-  width: 185px;
-  height: 300px;
   top: 35%;
   background-color: orange;
   border: 1px solid black;
 }
 .maplist div {
-  width: 185px;
+  width: 15vw;
   height: 50px;
-}
+} */
 .maphover {
   background-color: skyblue;
 }
@@ -77,26 +75,136 @@ section > h1 {
   margin-bottom: 30px;
   /* tlqkf */
 }
-.input {
+.input1 {
   position: relative;
-  width: 260px;
+  z-index: 100;
+  width: 26vw;
   height: 30px;
   border-bottom: 3px solid gray;
   margin-bottom: 20px;
 }
-.input i {
+.input1 .input_box1{
+  width: 100%;
+  margin-top: 10px;
+  background-color: skyblue;
+  display: none;
+}
+.input1 .input_box1 .input_text1{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: orange;
+}
+.input1 .input_box1 .input_text1:hover{
+  background-color: skyblue;
+}
+.input1 i {
   position: absolute;
   right: 2%;
   top: 20%;
+  transform: rotateX(0deg);
+  transition: 0.5s;
 }
+.input2 {
+  position: relative;
+  z-index: 100;
+  width: 26vw;
+  height: 30px;
+  border-bottom: 3px solid gray;
+  margin-bottom: 20px;
+}
+.input2 .input_box2{
+  width: 100%;
+  margin-top: 10px;
+  background-color: skyblue;
+  display: none;
+}
+.input2 .input_box2 .input_text2{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: orange;
+}
+.input2 .input_box2 .input_text2:hover{
+  background-color: skyblue;
+}
+.input2 i {
+  position: absolute;
+  right: 2%;
+  top: 20%;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+}
+.input3 {
+  position: relative;
+  z-index: 100;
+  width: 26vw;
+  height: 30px;
+  border-bottom: 3px solid gray;
+  margin-bottom: 20px;
+}
+.input3 .input_box3{
+  width: 100%;
+  margin-top: 10px;
+  background-color: skyblue;
+  display: none;
+}
+.input3 .input_box3 .input_text3{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: orange;
+}
+.input3 .input_box3 .input_text3:hover{
+  background-color: skyblue;
+}
+.input3 i {
+  position: absolute;
+  right: 2%;
+  top: 20%;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+}
+.input4 {
+  position: relative;
+  z-index: 100;
+  width: 26vw;
+  height: 30px;
+  border-bottom: 3px solid gray;
+  margin-bottom: 20px;
+}
+.input4 .input_box4{
+  width: 100%;
+  margin-top: 10px;
+  background-color: skyblue;
+  display: none;
+}
+.input4 .input_box4 .input_text4{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: orange;
+}
+.input4 .input_box4 .input_text4:hover{
+  background-color: skyblue;
+}
+.input4 i {
+  position: absolute;
+  right: 2%;
+  top: 20%;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+}
+
+
 .kakao {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 400px;
 }
 .kakao #map {
   width: 100%;
-  height: 70%;
+  height: 100%;
 }
 .shopcontainer {
   position: relative;
@@ -119,19 +227,21 @@ section > h1 {
 .shop .shop_1 a {
 }
 .shop .shop_1 a img {
-  width: 20vw;
+  width: 17vw;
   height: 20vh;
+  object-fit: cover;
 }
 .shop .shop_1 .shop__content {
-  width: 20vw;
-  height: 25vh;
+  width: 17vw;
+  height: 15vh;
 }
 .shop .shop_1 .shop__content h4 {
-  margin-bottom: 20px;
+  margin:10px 0px 5px;
   font-size: 16px;
   font-family: "Noto Sans KR";
 }
 .shop .shop_1 .shop__content p {
   font-size: 14px;
+  margin-top: 0px;
   font-family: "Noto Sans KR";
 }
