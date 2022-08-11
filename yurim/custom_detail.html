@@ -6,13 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- gsap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+    integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- gsap trigger-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
+    integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- css -->
   <link rel="stylesheet" href="./css/custom_detail.css">
   <!-- js -->
-  <script defer src="./js/main.js"></script>
+  <script defer src="./js/custom_detail.js"></script>
   <!-- Fontawesome -->
   <script src="https://kit.fontawesome.com/8924a45e02.js" crossorigin="anonymous"></script>
   <title>Custom detail</title>
@@ -25,7 +29,7 @@
       <span class="name">CANON</span>
       <span class="bgimg">CUS</span>
       <div class="img">
-          <img src="./img/custom/change1.png" alt="custom_camera">
+        <img src="./img/custom/change1.png" alt="custom_camera">
       </div>
       <div class="add-cart">
         <div class="price">
@@ -61,42 +65,40 @@
         </div>
 
         <div class="color">
-          <div><i class="fa-solid fa-palette"></i> Custom 색상
-            &nbsp;&nbsp;
-            <input type="Select" class="inputbox">
-          </div>
+          <div><i class="fa-solid fa-palette"></i> Custom 색상</div>
+          <input type="Select" class="inputbox">
           <div class="color_select">
-            <span class="color_each"></span>
-            <span class="color_each"></span>
-            <span class="color_each"></span>
-            <span class="color_each"></span>
-            <span class="color_each"></span>
-            <span class="color_each"></span>
-            <span class="color_each"></span>
-            <span class="color_each"></span>
+            <span class="color_each color1"></span>
+            <span class="color_each color2" onclick="selectColor(this.value)"></span>
+            <span class="color_each color3"></span>
+            <span class="color_each color4"></span>
+            <span class="color_each color5"></span>
+            <span class="color_each color6"></span>
+            <span class="color_each color7"></span>
+            <span class="color_each color8"></span>
+            <!-- <span class="color_each"></span> -->
           </div>
         </div>
-
         <div class="emoji">
           <div><i class="fa-solid fa-face-laugh-beam"></i> Custom 이모지
-            &nbsp;&nbsp;
-            <input type="Select" class="inputbox">
           </div>
+          <!-- input을 span 으로 변경  : emoji를 넣기 위해-->
+          <span type="text" class="inputbox_emoji"></span>
           <div class="emoji_select">
-            <span class="emoji_each"><i class="fa-solid fa-dog"></i></span>
-            <span class="emoji_each"><i class="fa-solid fa-cat"></i></span>
-            <span class="emoji_each"><i class="fa-brands fa-gratipay"></i></span>
-            <span class="emoji_each"><i class="fa-solid fa-heart"></i></span>
-            <span class="emoji_each"><i class="fa-solid fa-star"></i></span>
-            <span class="emoji_each"><i class="fa-solid fa-flag-checkered"></i></span>
-            <span class="emoji_each"><i class="fa-brands fa-apple"></i></span>
-            <span class="emoji_each"><i class="fa-brands fa-android"></i></span>
-            <span class="emoji_each"><i class="fa-brands fa-angrycreative"></i></span>
-            <span class="emoji_each"><i class="fa-solid fa-face-smile"></i></span>
-            <span class="emoji_each"><i class="fa-solid fa-mug-saucer"></i></span>
-            <span class="emoji_each"><i class="fa-solid fa-burger"></i></span>
-            <span class="emoji_each"><i class="fa-solid fa-earth-asia"></i></span>
-            <span class="emoji_each"><i class="fa-brands fa-ello"></i></span>
+            <span class="emoji_each "><i class="fa-solid fa-dog"></i></span>
+            <span class="emoji_each "><i class="fa-solid fa-cat"></i></span>
+            <span class="emoji_each "><i class="fa-brands fa-gratipay"></i></span>
+            <span class="emoji_each "><i class="fa-solid fa-heart"></i></span>
+            <span class="emoji_each "><i class="fa-solid fa-star"></i></span>
+            <span class="emoji_each "><i class="fa-solid fa-flag-checkered"></i></span>
+            <span class="emoji_each "><i class="fa-brands fa-apple"></i></span>
+            <span class="emoji_each "><i class="fa-brands fa-android"></i></span>
+            <span class="emoji_each "><i class="fa-brands fa-angrycreative"></i></span>
+            <span class="emoji_each "><i class="fa-solid fa-face-smile"></i></span>
+            <span class="emoji_each "><i class="fa-solid fa-mug-saucer"></i></span>
+            <span class="emoji_each "><i class="fa-solid fa-burger"></i></span>
+            <span class="emoji_each "><i class="fa-solid fa-earth-asia"></i></span>
+            <span class="emoji_each "><i class="fa-brands fa-ello"></i></span>
           </div>
         </div>
 
@@ -120,10 +122,10 @@
         </div>
         <div class="nav_more">
           <ul>
-            <li>설명</li>
-            <li>배송안내</li>
-            <li>교환및반품</li>
-            <li>디자인보호법</li>
+            <a href="#"><li>설명</li></a>
+            <a href="#"><li>배송안내</li></a>
+            <a href="#"><li>교환및반품</li></a>
+            <a href="#"><li>디자인보호법</li></a>
           </ul>
         </div>
       </div>

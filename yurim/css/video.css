@@ -104,6 +104,12 @@ h1 {
   top: 0;
   z-index: 3;
 }
+h1 .filmcamera {
+  color: var(--color-white);
+}
+h1 span strong {
+  color: #ff6602;
+}
 
 @media (min-width: 419px) {
   h1 {
