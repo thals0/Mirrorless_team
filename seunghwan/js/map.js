@@ -126,6 +126,7 @@ var positions = [
         '  </a>' +
         '</div>'
 
+<<<<<<< HEAD
     },
     {
         title: '용산카메라',
@@ -242,20 +243,32 @@ var positions = [
 
 // 마커 이미지의 이미지 주소입니다
 
+=======
+    }
+];
+
+// 마커 이미지의 이미지 주소입니다
+var imageSrc = "./img/마커이미지.png"; 
+>>>>>>> f7f5b39672d2660c1fe18c805d654cc0ef7bfe4a
     
 for (var i = 0; i < positions.length; i ++) {
     
     // 마커 이미지의 이미지 크기 입니다
+<<<<<<< HEAD
 
     var imageSrc = "./img/마커이미지.png";
     var imageSrc2 = "./img/마커이미지2.png";
     var imageSrc3 = "./img/마커이미지3.png";
     var imageSrc4 = "./img/마커이미지4.png";  
 
+=======
+    
+>>>>>>> f7f5b39672d2660c1fe18c805d654cc0ef7bfe4a
     var imageSize = new kakao.maps.Size(40, 40); // 마커이미지의 크기입니다
     var imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다. 
     
     // 마커 이미지를 생성합니다    
+<<<<<<< HEAD
     var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize ,imageOption);
     var markerImage2 = new kakao.maps.MarkerImage(imageSrc2, imageSize ,imageOption); 
     var markerImage3 = new kakao.maps.MarkerImage(imageSrc3, imageSize ,imageOption); 
@@ -271,10 +284,16 @@ for (var i = 0; i < positions.length; i ++) {
     }
     else if(i < 8){
             // 마커를 생성합니다
+=======
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize ,imageOption); 
+    
+    // 마커를 생성합니다
+>>>>>>> f7f5b39672d2660c1fe18c805d654cc0ef7bfe4a
     var marker = new kakao.maps.Marker({
         map: map, // 마커를 표시할 지도
         position: positions[i].latlng, // 마커를 표시할 위치
         title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+<<<<<<< HEAD
         image : markerImage2 // 마커 이미지
     });
     }
@@ -297,6 +316,10 @@ for (var i = 0; i < positions.length; i ++) {
     });
     }
 
+=======
+        image : markerImage // 마커 이미지
+    });
+>>>>>>> f7f5b39672d2660c1fe18c805d654cc0ef7bfe4a
 //     var content = '<div class="customoverlay">' +
 //     '  <a href='+positions[i].link+'>' +
 //     '    <span class="title">'+positions[i].title+ '</span>' +
@@ -341,6 +364,7 @@ function makeOverListener(map, marker, infowindow) {
 //         infowindow.close();
 //     };
 // }
+<<<<<<< HEAD
 let input1 = document.querySelector(".input1");
 let inputbox1 = document.querySelector(".input_box1")
 let inputText1 =document.querySelectorAll(".input_text1");
@@ -425,3 +449,16 @@ let input4I = document.querySelector(".input4 i");
 
 
 
+=======
+
+let maplistContent = document.querySelectorAll(".maplist div");
+
+for(let i =0; i<maplistContent.length;i++){
+    maplistContent[i].addEventListener("mouseover",function(e){
+        e.currentTarget.classList.add("maphover");
+    })
+    maplistContent[i].addEventListener("mouseout",function(e){
+        e.currentTarget.classList.remove("maphover");
+    })
+}
+>>>>>>> f7f5b39672d2660c1fe18c805d654cc0ef7bfe4a

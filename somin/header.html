@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/8924a45e02.js" crossorigin="anonymous"></script>
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- JS -->
+  <!-- <script defer src="./js/main.js"></script> -->
+  <script defer src="./js/header.js"></script>
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Header</title>
+</head>
+
+<body>
+  <header>
+    <div class="main_header">
+      <div class="logo">
+        <a href="../yurim/index.html" class="name">Mirrorless </a>
+        <!-- <a href="javascript:controlAutoplay();" class="icon">📸</a> -->
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <select name="product" id="" onchange="window.open(this.value,'_self');">
+              <option value="all.html" selected>All</option>
+              <option value="General">General</option>
+              <option value="Film Camera">Film Camera</option>
+              <option value="Camcoder.html">Camcoder</option>
+              </optgroup>
+            </select>
+          </li>
+          <li><a href="../yurim/custom_main.html">Custom</a></li>
+          <li><a href="../seunghwan/map.html">Film Map</a></li>
+          <li><a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a></li>
+          <li><a href="#" class="nav__btn"><i class="fa-solid fa-bars"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="bars">
+      <ul class="sub_menu">
+        <li><a href="#">
+            <i class="fa-regular fa-face-smile"></i>ABOUT US</a></li>
+        <li><a href="#">
+            <i class="fa-solid fa-hand-holding-heart"></i>CUSTOM</a></li>
+        <li class="product__btn">
+          <a href="#">
+            <i class="fa-solid fa-camera"></i>
+            PRODUCT
+            <i class="fa-solid fa-angle-down"></i>
+          </a>
+        </li>
+        <ul class="sub_product">
+          <li><a href="all.html">All</a></li>
+          <li><a href="general.html">General</a></li>
+          <li><a href="film.html">Film</a></li>
+          <li><a href="Camcoder.html">Camcoder</a></li>
+        </ul>
+        <li><a href="#"><i class="fa-solid fa-location-dot"></i>STORE</a></li>
+        <li>
+          <div class="icon">
+            <a href=""><i class="fa-regular fa-envelope"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+</body>
+
+</html>

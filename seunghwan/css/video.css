@@ -6,6 +6,7 @@
 body{
     position: relative;
     width: 100%;
+<<<<<<< HEAD
     height: 3000px;
     background-color: skyblue;
 }
@@ -31,6 +32,17 @@ section h1{
     top: 0%;
     left:0%;
 }
+=======
+    height: 720px;
+}
+
+video{
+    position: absolute;
+    width: 100%;
+    height: 720px;
+    object-fit: fill;
+}
+>>>>>>> f7f5b39672d2660c1fe18c805d654cc0ef7bfe4a
 section a img{
     position: absolute;
     width: 200px;
@@ -38,14 +50,20 @@ section a img{
 }
 section a .img1{
     position: absolute;
+<<<<<<< HEAD
     z-index: 1;
     left: 70%;
     top: 10%;
+=======
+    left: 70%;
+    top: 30%;
+>>>>>>> f7f5b39672d2660c1fe18c805d654cc0ef7bfe4a
     opacity: 0;
     transition: 2.5s;
 }
 section a .img2{
     position: absolute;
+<<<<<<< HEAD
     z-index: 1;
     opacity: 0;
     left: 20%;
@@ -65,3 +83,10 @@ section a .img2{
     transition: 1s;
 } */
 
+=======
+    opacity: 0;
+    left: 20%;
+    top: 30%;
+    transition: 2.5s;
+}
+>>>>>>> f7f5b39672d2660c1fe18c805d654cc0ef7bfe4a

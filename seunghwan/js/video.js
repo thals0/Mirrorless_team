@@ -1,6 +1,7 @@
 let camera1 =document.querySelector(".img1");
 let camera2 =document.querySelector(".img2");
 let video = document.querySelector(".video")
+<<<<<<< HEAD
 let title1 = document.querySelector(".title1");
 let title2 = document.querySelector(".title2");
 let title3 = document.querySelector(".title3");
@@ -13,6 +14,17 @@ let title3 = document.querySelector(".title3");
 // }
 
 // setTimeout(cameraOpcity, 9000);
+=======
+
+
+function cameraOpcity(){
+    camera1.style.opacity = 1;
+    camera2.style.opacity = 1;
+
+}
+
+setTimeout(cameraOpcity, 9000);
+>>>>>>> f7f5b39672d2660c1fe18c805d654cc0ef7bfe4a
 
 camera1.addEventListener('mouseover', function(){
     camera1.style.transform = "scale(1.5)";
@@ -28,6 +40,16 @@ camera1.addEventListener('click', function(){
     camera2.style.opacity ="0";
     setTimeout("location.href='map.html'", 3500);
   });
+<<<<<<< HEAD
+=======
+camera2.addEventListener('click', function(){
+    video.setAttribute("src","./video/videoreverse.mp4");
+    camera1.style.opacity ="0";
+    camera2.style.opacity ="0";
+    setTimeout("location.href='map.html'", 3500);
+  });
+  
+>>>>>>> f7f5b39672d2660c1fe18c805d654cc0ef7bfe4a
 camera2.addEventListener('mouseover', function(){
     camera2.style.transform = "scale(1.5)";
     camera2.style.transition = "0.5s";
@@ -35,6 +57,7 @@ camera2.addEventListener('mouseover', function(){
 camera2.addEventListener('mouseout', function(){
     camera2.style.transform = "scale(1)";
     camera2.style.transition = "0.5s";
+<<<<<<< HEAD
   });
 
   // let scrollYpos;
@@ -108,3 +131,6 @@ camera2.addEventListener('mouseout', function(){
    })  
      
      
+=======
+  });  
+>>>>>>> f7f5b39672d2660c1fe18c805d654cc0ef7bfe4a
