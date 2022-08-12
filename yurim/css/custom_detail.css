@@ -114,6 +114,7 @@ footer .inner p {
   font-family: "Racing Sans One";
   top: 0px;
   left: 0px;
+  overflow: hidden;
   /*expand*/
   /*details*/
 }
@@ -131,11 +132,20 @@ footer .inner p {
   letter-spacing: 1px;
   transition: 0.4s;
 }
-.details_page .expand .bgimg {
+.details_page .expand .bgimg_cus {
   position: absolute;
   left: 2vw;
   display: inline-block;
   color: var(--color-orange);
+  opacity: 0.65;
+  font: normal 300px/1 "Racing Sans One";
+}
+.details_page .expand .bgimg_tom {
+  position: absolute;
+  top: 25vh;
+  right: -45vw;
+  display: inline-block;
+  color: #c8c8c8;
   opacity: 0.65;
   font: normal 300px/1 "Racing Sans One";
 }
@@ -199,7 +209,13 @@ footer .inner p {
   position: absolute;
   top: 850px;
 }
-.details_page .details {
+.details_page .details_hiddenbox {
+  position: absolute;
+  top: 10vh;
+  right: -40vh;
+  width: 70%;
+}
+.details_page .details_hiddenbox .details {
   position: relative;
   font: normal 14px/1 "arial";
   width: 60%;
@@ -208,55 +224,48 @@ footer .inner p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflowX: scroll;
+  overflowY: scroll;
 }
-.details_page .details .bgimg {
-  position: absolute;
-  top: 25vh;
-  left: 1vw;
-  display: inline-block;
-  color: #c8c8c8;
-  opacity: 0.65;
-  font: normal 300px/1 "Racing Sans One";
-}
-.details_page .details .inner {
+.details_page .details_hiddenbox .details .inner {
   position: absolute;
   top: 5vh;
   margin-left: 12vw;
   width: 30vw;
 }
-.details_page .details .inner > div {
+.details_page .details_hiddenbox .details .inner > div {
   margin: 40px;
   display: flex;
   justify-content: space-between;
 }
-.details_page .details .inner .title {
+.details_page .details_hiddenbox .details .inner .title {
   font: bolder 18px/1 "airal";
 }
-.details_page .details .inner .diy {
+.details_page .details_hiddenbox .details .inner .diy {
   cursor: pointer;
   padding: 12px;
   border: 1px solid #000;
 }
-.details_page .details .inner .more {
+.details_page .details_hiddenbox .details .inner .more {
   display: none;
   font: normal 12px/1 "airal";
 }
-.details_page .details .inner .num {
+.details_page .details_hiddenbox .details .inner .num {
   padding-right: 40px;
   align-items: center;
   height: 7vh;
 }
-.details_page .details .inner .num .count {
+.details_page .details_hiddenbox .details .inner .num .count {
   display: flex;
   align-items: center;
 }
-.details_page .details .inner .num .count a {
+.details_page .details_hiddenbox .details .inner .num .count a {
   cursor: pointer;
   color: #000;
   font-size: 26px;
   opacity: 0.7;
 }
-.details_page .details .inner .num .count span {
+.details_page .details_hiddenbox .details .inner .num .count span {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -264,13 +273,13 @@ footer .inner p {
   line-height: 30px;
   margin: 0px 8px;
 }
-.details_page .details .inner .color {
+.details_page .details_hiddenbox .details .inner .color {
   display: flex;
   flex-direction: column;
   width: 100%;
   position: relative;
 }
-.details_page .details .inner .color .inputbox {
+.details_page .details_hiddenbox .details .inner .color .inputbox {
   display: inline-block;
   position: absolute;
   top: -1vh;
@@ -286,13 +295,13 @@ footer .inner p {
   background-color: #fff;
   box-sizing: border-box;
 }
-.details_page .details .inner .color .color_select {
+.details_page .details_hiddenbox .details .inner .color .color_select {
   justify-content: center;
   margin-top: 4vh;
   width: 100%;
   height: 7vh;
 }
-.details_page .details .inner .color .color_select .color_each {
+.details_page .details_hiddenbox .details .inner .color .color_select .color_each {
   margin-right: 10px;
   display: inline-block;
   width: 25px;
@@ -303,39 +312,39 @@ footer .inner p {
   border: 0.5px solid #555;
   transition: 0.5s;
 }
-.details_page .details .inner .color .color_select .color_each:nth-child(1) {
+.details_page .details_hiddenbox .details .inner .color .color_select .color_each:nth-child(1) {
   background-color: #f36969;
 }
-.details_page .details .inner .color .color_select .color_each:nth-child(2) {
+.details_page .details_hiddenbox .details .inner .color .color_select .color_each:nth-child(2) {
   background-color: #ffbc3f;
 }
-.details_page .details .inner .color .color_select .color_each:nth-child(3) {
+.details_page .details_hiddenbox .details .inner .color .color_select .color_each:nth-child(3) {
   background-color: #ffff88;
 }
-.details_page .details .inner .color .color_select .color_each:nth-child(4) {
+.details_page .details_hiddenbox .details .inner .color .color_select .color_each:nth-child(4) {
   background-color: #6da26d;
 }
-.details_page .details .inner .color .color_select .color_each:nth-child(5) {
+.details_page .details_hiddenbox .details .inner .color .color_select .color_each:nth-child(5) {
   background-color: #55add8;
 }
-.details_page .details .inner .color .color_select .color_each:nth-child(6) {
+.details_page .details_hiddenbox .details .inner .color .color_select .color_each:nth-child(6) {
   background-color: #313159;
 }
-.details_page .details .inner .color .color_select .color_each:nth-child(7) {
+.details_page .details_hiddenbox .details .inner .color .color_select .color_each:nth-child(7) {
   background-color: #ba89ba;
 }
-.details_page .details .inner .color .color_select .color_each:nth-child(8) {
+.details_page .details_hiddenbox .details .inner .color .color_select .color_each:nth-child(8) {
   background-color: #404040;
 }
-.details_page .details .inner .color .color_select .color_each:hover {
+.details_page .details_hiddenbox .details .inner .color .color_select .color_each:hover {
   transform: scale(1.1);
 }
-.details_page .details .inner .emoji {
+.details_page .details_hiddenbox .details .inner .emoji {
   display: flex;
   flex-direction: column;
   position: relative;
 }
-.details_page .details .inner .emoji .inputbox_emoji {
+.details_page .details_hiddenbox .details .inner .emoji .inputbox_emoji {
   position: absolute;
   top: -1vh;
   left: 18vh;
@@ -348,16 +357,16 @@ footer .inner p {
   text-align: center;
   line-height: 4vh;
 }
-.details_page .details .inner .emoji .inputbox_emoji:focus {
+.details_page .details_hiddenbox .details .inner .emoji .inputbox_emoji:focus {
   outline-color: #ff6602;
 }
-.details_page .details .inner .emoji .emoji_select {
+.details_page .details_hiddenbox .details .inner .emoji .emoji_select {
   justify-content: center;
   margin-top: 4vh;
   width: 100%;
   height: 7vh;
 }
-.details_page .details .inner .emoji .emoji_select .emoji_each {
+.details_page .details_hiddenbox .details .inner .emoji .emoji_select .emoji_each {
   margin-right: 10px;
   display: inline-block;
   width: 30px;
@@ -367,15 +376,15 @@ footer .inner p {
   line-height: 30px;
   transition: 0.5s;
 }
-.details_page .details .inner .emoji .emoji_select .emoji_each:hover {
+.details_page .details_hiddenbox .details .inner .emoji .emoji_select .emoji_each:hover {
   transform: scale(1.3);
 }
-.details_page .details .inner .cart {
+.details_page .details_hiddenbox .details .inner .cart {
   margin-bottom: 0px;
   display: flex;
   height: 8vh;
 }
-.details_page .details .inner .cart span {
+.details_page .details_hiddenbox .details .inner .cart span {
   width: 120px;
   height: 50px;
   margin-right: 10px;
@@ -385,21 +394,21 @@ footer .inner p {
   border: 1px solid var(--color-deep-black);
   transition: 0.5s;
 }
-.details_page .details .inner .cart span.item3 {
+.details_page .details_hiddenbox .details .inner .cart span.item3 {
   width: 60px;
   background-color: #000;
   color: #fff;
   margin-right: 0px;
 }
-.details_page .details .inner .cart span.item3:hover {
+.details_page .details_hiddenbox .details .inner .cart span.item3:hover {
   background-color: var(--color-white);
   color: var(--color-deep-black);
 }
-.details_page .details .inner .cart span:hover {
+.details_page .details_hiddenbox .details .inner .cart span:hover {
   background-color: var(--color-deep-black);
   color: var(--color-white);
 }
-.details_page .details .inner .buy {
+.details_page .details_hiddenbox .details .inner .buy {
   border-radius: 1px;
   margin: 8px 40px;
   display: block;
@@ -408,7 +417,7 @@ footer .inner p {
   text-align: center;
   line-height: 50px;
 }
-.details_page .details .inner .naver {
+.details_page .details_hiddenbox .details .inner .naver {
   margin-left: 6vw;
   margin-top: 12px;
   border-top: 2px solid #000;
@@ -416,17 +425,17 @@ footer .inner p {
   width: 65%;
   display: flex;
 }
-.details_page .details .inner .naver .logo_item {
+.details_page .details_hiddenbox .details .inner .naver .logo_item {
   padding-top: 4px;
   width: 100px;
   margin-right: 10px;
   font-size: 10px;
 }
-.details_page .details .inner .naver .logo_item .logo {
+.details_page .details_hiddenbox .details .inner .naver .logo_item .logo {
   color: #1fcd63;
   font-weight: bolder;
 }
-.details_page .details .inner .naver .npay {
+.details_page .details_hiddenbox .details .inner .naver .npay {
   width: 130px;
   height: 37px;
   text-align: center;
@@ -436,7 +445,7 @@ footer .inner p {
   color: #fff;
   margin-right: 10px;
 }
-.details_page .details .inner .naver .get {
+.details_page .details_hiddenbox .details .inner .naver .get {
   width: 43px;
   height: 37px;
   text-align: center;
@@ -445,27 +454,27 @@ footer .inner p {
   border: 1px solid #777;
   background-color: #fff;
 }
-.details_page .details .inner .nav_more {
+.details_page .details_hiddenbox .details .inner .nav_more {
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
 }
-.details_page .details .inner .nav_more ul {
+.details_page .details_hiddenbox .details .inner .nav_more ul {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.details_page .details .inner .nav_more ul a {
+.details_page .details_hiddenbox .details .inner .nav_more ul a {
   font: 12px/1 "arial";
   color: #000;
 }
-.details_page .details .inner .nav_more ul a li {
+.details_page .details_hiddenbox .details .inner .nav_more ul a li {
   padding-right: 18px;
 }
-.details_page .details .inner .nav_more ul a:not(:last-child) {
+.details_page .details_hiddenbox .details .inner .nav_more ul a:not(:last-child) {
   border-right: 1px solid #666;
 }
-.details_page .details .inner .nav_more ul a:hover {
+.details_page .details_hiddenbox .details .inner .nav_more ul a:hover {
   text-decoration: underline;
 }
 .details_page footer {

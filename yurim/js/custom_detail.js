@@ -33,6 +33,29 @@
 
 
 /* 2. custom sub페이지 +, - 누르면 증감되도록 하기*/
+// + 누르면 1 증가 
+let plusBtn = document.querySelector('.num > .count > .plus')
+plusBtn.addEventListener('click', () => {
+  plusBtn.innerHTML = count++;
+})
+
+// function count(type)  {
+//   // 결과를 표시할 element
+//   const resultElement = document.getElementById('result');
+  
+//   // 현재 화면에 표시된 값
+//   let num = resultElement.innerText;
+  
+//   // 더하기/빼기
+//   if(type === 'plus') {
+//     num = parseInt(num) + 1;
+//   }else if(type === 'minus')  {
+//     num = parseInt(num) - 1;
+//   }
+  
+//   // 결과 출력
+//   resultElement.innerText = num;
+// }
 
 
 /* 3. custom sub페이지 클릭하면 input값에 나타나게하기*/

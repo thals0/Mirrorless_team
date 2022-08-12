@@ -30,6 +30,7 @@
   font-family: "Racing Sans One";
   top: 0px;
   left: 0px;
+  overflow: hidden;
 
   /*expand*/
   .expand {
@@ -47,11 +48,21 @@
       transition: 0.4s;
     }
 
-    .bgimg {
+    .bgimg_cus {
       position: absolute;
       left: 2vw;
       display: inline-block;
       color: var(--color-orange);
+      opacity: .65;
+      font: normal 300px/1 "Racing Sans One";
+    }
+
+    .bgimg_tom {
+      position: absolute;
+      top: 25vh;
+      right: -45vw;
+      display: inline-block;
+      color: #c8c8c8;
       opacity: .65;
       font: normal 300px/1 "Racing Sans One";
     }
@@ -100,12 +111,12 @@
           font-size: 32px;
         }
 
-      //img자체가 아니라 img div에 넣어서 조정해야함
-      &.on {
-        position: absolute;
-        top: 820px;
-        left: 8vw;
-      }
+        //img자체가 아니라 img div에 넣어서 조정해야함
+        &.on {
+          position: absolute;
+          top: 820px;
+          left: 8vw;
+        }
       }
 
       a {
@@ -136,323 +147,324 @@
   }
 
   /*details*/
-  .details {
-    position: relative;
-    font: normal 14px/1 "arial";
-    width: 60%;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .details_hiddenbox {
+    position: absolute;
+    top: 10vh;
+    // bottom: 10vh;
+    right: -40vh;
+    width: 70%;    
 
-    .bgimg {
-      position: absolute;
-      top: 25vh;
-      left: 1vw;
-      display: inline-block;
-      color: #c8c8c8;
-      opacity: .65;
-      font: normal 300px/1 "Racing Sans One";
-    }
+    .details {
+      position: relative;
+      font: normal 14px/1 "arial";
+      width: 60%;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflowX: scroll;
+      overflowY: scroll;
 
-    .inner {
-      position: absolute;
-      top: 5vh;
-      margin-left: 12vw;
-      width: 30vw;
+      .inner {
+        position: absolute;
+        top: 5vh;
+        margin-left: 12vw;
+        width: 30vw;
 
-      >div {
-        margin: 40px;
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .title {
-        font: bolder 18px/1 "airal";
-      }
-
-      .diy {
-        cursor: pointer;
-        padding: 12px;
-        border: 1px solid #000;
-      }
-
-      .more {
-        display: none;
-        font: normal 12px/1 "airal";
-      }
-
-      .num {
-        padding-right: 40px;
-        align-items: center;
-        height: 7vh;
-
-        .count {
+        >div {
+          margin: 40px;
           display: flex;
+          justify-content: space-between;
+        }
+
+        .title {
+          font: bolder 18px/1 "airal";
+        }
+
+        .diy {
+          cursor: pointer;
+          padding: 12px;
+          border: 1px solid #000;
+        }
+
+        .more {
+          display: none;
+          font: normal 12px/1 "airal";
+        }
+
+        .num {
+          padding-right: 40px;
           align-items: center;
-
-          a {
-            cursor: pointer;
-            color: #000;
-            font-size: 26px;
-            opacity: 0.7;
-          }
-
-          span {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            text-align: center;
-            line-height: 30px;
-            margin: 0px 8px;
-          }
-        }
-      }
-
-      .color {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        position: relative;
-
-        .inputbox {
-          display: inline-block;
-          position: absolute;
-          top: -1vh;
-          left: 16vh;
-          width: 25px;
-          height: 25px;
-          outline: none;
-          font-size: 16px;
-          padding: 0 10px;
-          border: 1px solid #777;
-          border-radius: 50%;
-          box-sizing: border-box;
-          background-color: #fff;
-          box-sizing: border-box;
-        }
-
-        .color_select {
-          // display: flex;
-          // flex-direction: column;
-          justify-content: center;
-          margin-top: 4vh;
-          width: 100%;
           height: 7vh;
 
-          .color_each {
-            margin-right: 10px;
+          .count {
+            display: flex;
+            align-items: center;
+
+            a {
+              cursor: pointer;
+              color: #000;
+              font-size: 26px;
+              opacity: 0.7;
+            }
+
+            span {
+              display: inline-block;
+              width: 30px;
+              height: 30px;
+              text-align: center;
+              line-height: 30px;
+              margin: 0px 8px;
+            }
+          }
+        }
+
+        .color {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          position: relative;
+
+          .inputbox {
             display: inline-block;
+            position: absolute;
+            top: -1vh;
+            left: 16vh;
             width: 25px;
             height: 25px;
+            outline: none;
+            font-size: 16px;
+            padding: 0 10px;
+            border: 1px solid #777;
             border-radius: 50%;
-            text-align: center;
-            line-height: 30px;
+            box-sizing: border-box;
+            background-color: #fff;
+            box-sizing: border-box;
+          }
+
+          .color_select {
+            // display: flex;
+            // flex-direction: column;
+            justify-content: center;
+            margin-top: 4vh;
+            width: 100%;
+            height: 7vh;
+
+            .color_each {
+              margin-right: 10px;
+              display: inline-block;
+              width: 25px;
+              height: 25px;
+              border-radius: 50%;
+              text-align: center;
+              line-height: 30px;
+              border: .5px solid #555;
+              transition: .5s;
+
+              &:nth-child(1) {
+                background-color: #f36969;
+              }
+
+              &:nth-child(2) {
+                background-color: #ffbc3f;
+              }
+
+              &:nth-child(3) {
+                background-color: #ffff88;
+              }
+
+              &:nth-child(4) {
+                background-color: #6da26d;
+              }
+
+              &:nth-child(5) {
+                background-color: #55add8;
+              }
+
+              &:nth-child(6) {
+                background-color: #313159;
+              }
+
+              &:nth-child(7) {
+                background-color: #ba89ba;
+              }
+
+              &:nth-child(8) {
+                background-color: #404040;
+              }
+
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+
+        .emoji {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+
+          .inputbox_emoji {
+            position: absolute;
+            top: -1vh;
+            left: 18vh;
+            width: 10vw;
+            height: 4vh;
             border: .5px solid #555;
-            transition: .5s;
-
-            &:nth-child(1) {
-              background-color: #f36969;
-            }
-
-            &:nth-child(2) {
-              background-color: #ffbc3f;
-            }
-
-            &:nth-child(3) {
-              background-color: #ffff88;
-            }
-
-            &:nth-child(4) {
-              background-color: #6da26d;
-            }
-
-            &:nth-child(5) {
-              background-color: #55add8;
-            }
-
-            &:nth-child(6) {
-              background-color: #313159;
-            }
-
-            &:nth-child(7) {
-              background-color: #ba89ba;
-            }
-
-            &:nth-child(8) {
-              background-color: #404040;
-            }
-
-            &:hover {
-              transform: scale(1.1);
-            }
-          }
-        }
-      }
-
-      .emoji {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-
-        .inputbox_emoji {
-          position: absolute;
-          top: -1vh;
-          left: 18vh;
-          width: 10vw;
-          height: 4vh;
-          border: .5px solid #555;
-          border-radius: 3px;
-          box-sizing: border-box;
-          background-color: #fff;
-          //이모지 중앙정렬을 위해
-          text-align: center;
-          line-height: 4vh;
-
-          &:focus {
-            outline-color: #ff6602;
-          }
-        }
-
-        .emoji_select {
-          justify-content: center;
-          margin-top: 4vh;
-          width: 100%;
-          height: 7vh;
-
-          .emoji_each {
-            margin-right: 10px;
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
+            border-radius: 3px;
+            box-sizing: border-box;
+            background-color: #fff;
+            //이모지 중앙정렬을 위해
             text-align: center;
-            line-height: 30px;
-            transition: .5s;
+            line-height: 4vh;
 
-            &:hover {
-              transform: scale(1.3);
+            &:focus {
+              outline-color: #ff6602;
+            }
+          }
+
+          .emoji_select {
+            justify-content: center;
+            margin-top: 4vh;
+            width: 100%;
+            height: 7vh;
+
+            .emoji_each {
+              margin-right: 10px;
+              display: inline-block;
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              text-align: center;
+              line-height: 30px;
+              transition: .5s;
+
+              &:hover {
+                transform: scale(1.3);
+              }
             }
           }
         }
-      }
 
-      .cart {
-        margin-bottom: 0px;
-        display: flex;
-        height: 8vh;
+        .cart {
+          margin-bottom: 0px;
+          display: flex;
+          height: 8vh;
 
-        span {
-          width: 120px;
+          span {
+            width: 120px;
+            height: 50px;
+            // width: 100%;
+            margin-right: 10px;
+            border-radius: 2px;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid var(--color-deep-black);
+            transition: .5s;
+
+            &.item3 {
+              width: 60px;
+              background-color: #000;
+              color: #fff;
+              margin-right: 0px;
+
+              &:hover {
+                background-color: var(--color-white);
+                color: var(--color-deep-black);
+              }
+            }
+
+            &:hover {
+              background-color: var(--color-deep-black);
+              color: var(--color-white);
+            }
+          }
+        }
+
+        .buy {
+          border-radius: 1px;
+          margin: 8px 40px;
+          display: block;
           height: 50px;
-          // width: 100%;
-          margin-right: 10px;
-          border-radius: 2px;
+          border: 1px solid #000;
           text-align: center;
           line-height: 50px;
-          border: 1px solid var(--color-deep-black);
-          transition: .5s;
+        }
 
-          &.item3 {
-            width: 60px;
-            background-color: #000;
-            color: #fff;
-            margin-right: 0px;
+        .naver {
+          margin-left: 6vw;
+          margin-top: 12px;
+          border-top: 2px solid #000;
+          padding: 8px;
+          width: 65%;
+          display: flex;
 
-            &:hover {
-              background-color: var(--color-white);
-              color: var(--color-deep-black);
+          .logo_item {
+            padding-top: 4px;
+            width: 100px;
+            margin-right: 10px;
+            font-size: 10px;
+
+            .logo {
+              color: #1fcd63;
+              font-weight: bolder;
             }
           }
 
-          &:hover {
-            background-color: var(--color-deep-black);
-            color: var(--color-white);
+          .npay {
+            width: 130px;
+            height: 37px;
+            text-align: center;
+            line-height: 37px;
+            border: 1px solid #777;
+            background-color: #1fcd63;
+            color: #fff;
+            margin-right: 10px;
           }
-        }
-      }
 
-      .buy {
-        border-radius: 1px;
-        margin: 8px 40px;
-        display: block;
-        height: 50px;
-        border: 1px solid #000;
-        text-align: center;
-        line-height: 50px;
-      }
-
-      .naver {
-        margin-left: 6vw;
-        margin-top: 12px;
-        border-top: 2px solid #000;
-        padding: 8px;
-        width: 65%;
-        display: flex;
-
-        .logo_item {
-          padding-top: 4px;
-          width: 100px;
-          margin-right: 10px;
-          font-size: 10px;
-
-          .logo {
+          .get {
+            width: 43px;
+            height: 37px;
+            text-align: center;
+            line-height: 37px;
             color: #1fcd63;
-            font-weight: bolder;
+            border: 1px solid #777;
+            background-color: #fff;
           }
         }
 
-        .npay {
-          width: 130px;
-          height: 37px;
-          text-align: center;
-          line-height: 37px;
-          border: 1px solid #777;
-          background-color: #1fcd63;
-          color: #fff;
-          margin-right: 10px;
-        }
-
-        .get {
-          width: 43px;
-          height: 37px;
-          text-align: center;
-          line-height: 37px;
-          color: #1fcd63;
-          border: 1px solid #777;
-          background-color: #fff;
-        }
-      }
-
-      .nav_more {
-        margin-top: 50px;
-        display: flex;
-        justify-content: space-between;
-
-        ul {
-          width: 100%;
+        .nav_more {
+          margin-top: 50px;
           display: flex;
           justify-content: space-between;
 
-          a{
-            font: 12px/1 "arial";
-            color: #000;
-            li {
-              padding-right: 18px;
-            }
+          ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
 
-            &:not(:last-child) {
-              border-right: 1px solid #666;
-            }
+            a {
+              font: 12px/1 "arial";
+              color: #000;
 
-            &:hover{
-              text-decoration: underline;
+              li {
+                padding-right: 18px;
+              }
+
+              &:not(:last-child) {
+                border-right: 1px solid #666;
+              }
+
+              &:hover {
+                text-decoration: underline;
+              }
             }
           }
         }
-      }
 
+      }
     }
   }
 
