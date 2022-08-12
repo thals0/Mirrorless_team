@@ -77,12 +77,12 @@
       z-index: 1;
       // transition: 2s;
 
-      //img자체가 아니라 img div에 넣어서 조정해야함
-      &.on {
-        position: absolute;
-        top: 395px;
-        left: 8vw;
-      }
+      // //img자체가 아니라 img div에 넣어서 조정해야함
+      // &.on {
+      //   position: absolute;
+      //   top: 395px;
+      //   left: 8vw;
+      // }
 
       img {
         width: 75%;
@@ -163,13 +163,13 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      overflowX: scroll;
-      overflowY: scroll;
+      overflow-X: hidden;
+      overflow-Y: scroll;
 
       .inner {
         position: absolute;
         top: 5vh;
-        margin-left: 12vw;
+        margin-left: 14vw;
         width: 30vw;
 
         >div {
@@ -182,11 +182,68 @@
           font: bolder 18px/1 "airal";
         }
 
-        .diy {
-          cursor: pointer;
-          padding: 12px;
-          border: 1px solid #000;
+      .inputlist{
+        cursor: pointer;
+        border: 1px solid #000;
+        height: 30px;
+        position: relative;
+        // transition: 4s;
+
+        .placeholder{
+          position: absolute;
+          top: 30%;
+          left: 10%;
+          transform: translate(-50%, 0);
+          color: #888;
         }
+
+        i{
+          position: absolute;
+          top: 50%;
+          right: 2%;
+          transform: translate(-50%, -50%);
+          
+        }
+        .sub_list{
+          display: none;
+
+          &.active{
+            display: block;
+            z-index: 3;
+            position: absolute;
+            top: 30px;
+            left: -1px;
+            
+            li{
+              padding: 2vh;
+              border: 1px solid #777;
+              width: 21.5vw;
+              background-color: var(--color-white);
+              transition: 1s;
+
+              &:not(:first-child){
+                border-top: none;
+              }
+
+              &:hover{
+                background-color: var(--color-deep-black);
+                a{
+                  color: #fff;
+                }
+              }
+              
+              a{
+                color: var(--color-deep-black);
+
+                &:hover{
+                  
+                }
+              }
+              
+            }
+          }
+        }
+      }
 
         .more {
           display: none;
@@ -194,7 +251,7 @@
         }
 
         .num {
-          padding-right: 40px;
+          padding-right: 30px;
           align-items: center;
           height: 7vh;
 
@@ -362,7 +419,8 @@
             text-align: center;
             line-height: 50px;
             border: 1px solid var(--color-deep-black);
-            transition: .5s;
+            background-color: var(--color-white);
+            transition: 1s;
 
             &.item3 {
               width: 60px;
@@ -391,6 +449,12 @@
           border: 1px solid #000;
           text-align: center;
           line-height: 50px;
+          transition: 1s;
+
+          &:hover{
+            background-color: var(--color-deep-black);
+            color: var(--color-white);
+          }
         }
 
         .naver {

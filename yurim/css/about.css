@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
 * {
@@ -30,6 +31,8 @@ a {
 body {
   font: 16px/1 "Racing Sans One";
   background-color: var(--color-white);
+  width: 100%;
+  height: 100vh;
 }
 
 header.on {
@@ -121,34 +124,286 @@ header #bars .sub_menu .sub_product li {
 }
 
 .mainbox {
-  position: relative;
   width: 85%;
   height: 30vh;
   background-color: var(--color-orange);
+  margin: auto;
+  position: relative;
   top: 6vh;
-  left: 50%;
-  transform: translate(-50%, 0);
   border-radius: 9px;
 }
 
-.titles .title {
-  z-index: 3;
+.titles {
   position: absolute;
-  top: 39vh;
-  left: 15%;
-  font: 60px/1 "Racing Sans One";
+  display: flex;
+  top: 37vh;
+  left: 10%;
+}
+.titles .title {
+  z-index: 2;
+  font: 70px/1 "Racing Sans One";
+  margin-left: 60px;
+}
+.titles .sub_title {
+  font: 20px/1 "arial";
+  color: var(--color-grey);
+  position: absolute;
+  top: 25vh;
+  left: 5vw;
 }
 .titles i {
-  margin-left: 30vw;
-  position: absolute;
-  top: 4vh;
+  font: 80px/1 "Racing Sans One";
+  margin-left: 70px;
 }
 .titles img {
   position: absolute;
-  top: 27vh;
-  right: 30vw;
-  width: 25%;
-  height: 45%;
+  top: -15vh;
+  left: 50vw;
+  width: 60%;
+}
+
+/*about us*/
+article.intention {
+  position: relative;
+  top: 40vh;
+  left: 10vw;
+  display: flex;
+}
+article.intention div img {
+  position: absolute;
+  top: 7vh;
+  width: 35%;
+  border-radius: 10px;
+  z-index: 2;
+}
+article.intention div span {
+  position: absolute;
+  top: 20vh;
+  margin-left: 40vw;
+  z-index: 2;
+}
+article.intention div .about_title {
+  position: absolute;
+  top: 8vh;
+  margin-left: 40vw;
+  font: 50px/1 "Racing Sans One";
+  z-index: 2;
+}
+article.intention div .about_content {
+  position: absolute;
+  top: 12vh;
+  right: 18vw;
+  width: 60vw;
+  height: 40vh;
+  background-color: rgb(228, 226, 226);
+  border-radius: 3px;
+}
+
+/*인식한 문제*/
+article.problem {
+  position: relative;
+  font: 140px/1 "Racing Sans One";
+}
+article.problem .collabo_content div:nth-of-type(1) {
+  position: absolute;
+  top: 110vh;
+  left: 10vw;
+  width: 35%;
+  height: 75%;
+  background-color: rgb(228, 226, 226);
+  border-radius: 3px;
+}
+article.problem .collabo_content div:nth-of-type(1) img {
+  width: 40%;
+}
+article.problem .collabo_content div:nth-of-type(1) span {
+  position: absolute;
+  top: 2vh;
+  font: 10px/1 "arial";
+}
+article.problem .collabo_content div:nth-of-type(2) {
+  position: absolute;
+  top: 150vh;
+  left: 10vw;
+  width: 35%;
+  height: 75%;
+  background-color: rgb(228, 226, 226);
+  border-radius: 3px;
+}
+article.problem .collabo_content div:nth-of-type(3) {
+  position: absolute;
+  top: 190vh;
+  left: 10vw;
+  width: 35%;
+  height: 75%;
+  background-color: rgb(228, 226, 226);
+  border-radius: 3px;
+}
+article.problem .collabo_content div:nth-of-type(4) {
+  position: absolute;
+  top: 175vh;
+  right: 12vw;
+  width: 18%;
+  height: 65%;
+  background-color: var(--color-orange);
+  border-radius: 50% 50% 0 50%;
+}
+article.problem .collabo_content div:nth-of-type(4) img {
+  width: 100%;
+}
+article.problem .collabo_titile span:nth-of-type(1) {
+  position: absolute;
+  top: 115vh;
+  right: 23vw;
+}
+article.problem .collabo_titile span:nth-of-type(2) {
+  position: absolute;
+  top: 150vh;
+  right: 6vw;
+}
+article.problem .collabo_titile span:nth-of-type(3) {
+  position: absolute;
+  top: 185vh;
+  right: 26vw;
+}
+
+article.who {
+  top: 190vh;
+  left: 10vw;
+  position: relative;
+  font: 50px/1 "Racing Sans One";
+}
+article.who .who_boxs {
+  display: flex;
+  width: 100%;
+}
+article.who .who_boxs .who_box1 {
+  position: absolute;
+  top: 40vh;
+  left: 0;
+  width: 20%;
+  height: 60vh;
+  background-color: rgb(228, 226, 226);
+  border-radius: 3px;
+}
+article.who .who_boxs .who_box1 img {
+  position: absolute;
+  top: -20vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+}
+article.who .who_boxs .who_box2 {
+  position: absolute;
+  top: 40vh;
+  width: 20%;
+  height: 60vh;
+  background-color: rgb(228, 226, 226);
+  border-radius: 3px;
+  margin-left: 30vw;
+}
+article.who .who_boxs .who_box2 img {
+  position: absolute;
+  top: -20vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1%;
+}
+article.who .who_boxs .who_box3 {
+  position: absolute;
+  top: 40vh;
+  width: 20%;
+  height: 60vh;
+  background-color: rgb(228, 226, 226);
+  border-radius: 3px;
+  margin-left: 60vw;
+}
+article.who .who_boxs .who_box3 img {
+  position: absolute;
+  top: -20vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+}
+
+/*footer*/
+footer {
+  position: absolute;
+  top: 385vh;
+  width: 100%;
+  padding: 4vh 0 1vh 0;
+  margin-top: 6vh;
+  background-color: #333;
+  color: #fff;
+}
+footer .inner .agreement {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+footer .inner .agreement li {
+  font: 10px/1 "arial";
+  justify-content: center;
+  padding: 10px;
+}
+footer .inner .agreement li:last-child {
+  margin-right: none;
+}
+footer .inner .agreement li:not(:nth-child(1))::before {
+  content: "|";
+  color: #c8c8c8;
+  margin-right: 10px;
+}
+footer .inner .agreement li a {
+  color: #c8c8c8;
+}
+footer .inner .agreement li a:hover {
+  text-decoration: underline;
+}
+footer .inner .btns {
+  display: flex;
+  margin-top: 1.5vh;
+  justify-content: center;
+}
+footer .inner .btns li {
+  font: 10px/1 "arial";
+}
+footer .inner .btns li a {
+  text-align: center;
+  display: block;
+  width: 100px;
+  color: #fff;
+  padding: 0.7vh;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  margin-left: 30px;
+  transition: 1s;
+}
+footer .inner .btns li a:hover {
+  background-color: #fff;
+  color: #333;
+  text-decoration: underline;
+}
+footer .inner .company_contents {
+  display: flex;
+  font: 10px/1 "arial";
+  padding: 3vh 0 0 0;
+  justify-content: center;
+  color: #c8c8c8;
+}
+footer .inner .company_contents li {
+  margin-left: 20px;
+}
+footer .inner .company_contents li:last-child {
+  margin-left: none;
+}
+footer .inner p {
+  padding: 2vh 0;
+  font: 10px/1 "arial";
+  margin-left: 10px;
+  text-align: center;
+  color: #c8c8c8;
 }
 
 /*# sourceMappingURL=about.css.map */

@@ -26,11 +26,15 @@
 body {
   font: 16px/1 "Racing Sans One";
   background-color: var(--color-white);
+  width: 100%;
+  height: 100vh;
 }
+
 header {
   &.on {
     display: none;
   }
+
   .main_header {
     z-index: 4;
     width: 100%;
@@ -49,18 +53,22 @@ header {
         color: var(--color-deep-black);
         font: 40px/1 "Racing Sans One";
       }
+
       a.icon {
         margin-left: 8px;
         font-size: 30px;
       }
     }
+
     nav {
       ul {
         display: flex;
         justify-content: space-between;
+
         li {
           margin: 0px 16px;
           cursor: pointer;
+
           a {
             color: var(--color-deep-black);
             margin-right: 2vw;
@@ -79,6 +87,7 @@ header {
     &.active {
       display: block;
     }
+
     width: 370px;
     height: 100%;
     margin-left: auto;
@@ -99,8 +108,7 @@ header {
         transition: 0.5s;
 
         &:hover {
-          background-color: var(--color-deep-black)
-          a{
+          background-color: var(--color-deep-black) a {
             color: #f6f6f6;
           }
         }
@@ -108,10 +116,12 @@ header {
         a {
           i {
             margin: 8px;
+
             &.fa-angle-down {
               margin-left: 170px;
             }
           }
+
           color: #fff;
         }
 
@@ -124,9 +134,11 @@ header {
 
       .sub_product {
         display: none;
+
         &.active {
           display: block;
         }
+
         li {
           font-size: 16px;
           // margin: 12px 0px 0px 30px;
@@ -139,35 +151,335 @@ header {
 }
 
 // main
-.mainbox{
-  position: relative;
+.mainbox {
   width: 85%;
   height: 30vh;
   background-color: var(--color-orange);
+  margin: auto;
+  position: relative;
   top: 6vh;
-  left: 50%;
-  transform: translate(-50%, 0);
+  // left: 50%;
+  // transform: translate(-50%, 0);
   border-radius: 9px;
 }
 
-.titles{
-  .title{
-    z-index: 3;
-    position: absolute;
-    top: 39vh;
-    left: 15%;
-    font: 60px/1 "Racing Sans One";
+.titles {
+  position: absolute;
+  display: flex;
+  top: 37vh;
+  left: 10%;
+  // transform: translate(-50%, 0);
+
+  .title {
+    z-index: 2;
+    font: 70px/1 "Racing Sans One";
+    margin-left: 60px;
   }
-  i{
-    margin-left: 30vw;
+
+  .sub_title{
+    font: 20px/1 "arial";
+    color: var(--color-grey);
     position: absolute;
-    top: 4vh;
+    top: 25vh;
+    left: 5vw;
   }
-  img{
+
+  i {
+    font: 80px/1 "Racing Sans One";
+    margin-left: 70px;
+  }
+
+  img {
     position: absolute;
-    top: 27vh;
-    right: 30vw;
-    width: 25%;
-    height: 45%;
+    top: -15vh;
+    left: 50vw;
+    width: 60%;
   }
+}
+
+/*about us*/
+article.intention{
+  position: relative;
+  top: 40vh;
+  left: 10vw;
+  display: flex;
+  div{
+    img{
+      position: absolute;
+      top: 7vh;
+      // opacity: .9;
+      width: 35%;
+      border-radius: 10px;
+      z-index: 2;
+    }
+    span{
+      position: absolute;
+      top: 20vh;
+      margin-left: 40vw;
+      z-index: 2;
+    }
+  }
+
+  div{
+    .about_title{
+      position: absolute;
+      top: 8vh;
+      margin-left: 40vw;
+      font: 50px/1 "Racing Sans One";
+      z-index: 2;
+    }
+  
+    .about_content{
+      position: absolute;
+      top: 12vh;
+      right: 18vw;
+      width: 60vw;
+      height: 40vh;
+      background-color: rgb(228, 226, 226);
+      border-radius: 3px;
+    }
+  }
+}
+
+/*인식한 문제*/
+article.problem{
+  position: relative;
+  font: 140px/1 "Racing Sans One";
+
+  .collabo_content{
+    
+    div:nth-of-type(1){
+      position: absolute;
+      top: 110vh;
+      left: 10vw;
+      width: 35%;
+      height: 75%;
+      background-color:rgb(228, 226, 226);
+      border-radius: 3px;
+      img{
+        width: 40%;
+      }
+      span{
+        position: absolute;
+        top: 2vh;
+        font: 10px/1 "arial";
+      }
+    }
+    div:nth-of-type(2){
+      position: absolute;
+      top: 150vh;
+      left: 10vw;
+      width: 35%;
+      height: 75%;
+      background-color:rgb(228, 226, 226);
+      border-radius: 3px;
+    }
+    div:nth-of-type(3){
+      position: absolute;
+      top: 190vh;
+      left: 10vw;
+      width: 35%;
+      height: 75%;
+      background-color:rgb(228, 226, 226);
+      border-radius: 3px;
+    }
+    //orage색 원형
+    div:nth-of-type(4){
+      position: absolute;
+      top: 175vh;
+      right: 12vw;
+      width: 18%;
+      height: 65%;
+      background-color:var(--color-orange);
+      border-radius: 50% 50% 0 50%;
+      img{
+        width: 100%;
+
+      }
+    }
+  }
+
+  .collabo_titile{
+    span:nth-of-type(1){
+      position: absolute;
+      top: 115vh;
+      right: 23vw;
+    }
+  
+    span:nth-of-type(2){
+      position: absolute;
+      top: 150vh;
+      right: 6vw;
+    }
+  
+    span:nth-of-type(3){
+      position: absolute;
+      top: 185vh;
+      right: 26vw;
+    }
+  }
+}
+
+// 우리팀
+article.who{
+  top: 190vh;
+  left: 10vw;
+  position: relative;
+  font: 50px/1 "Racing Sans One";
+  
+  span{
+
+    
+  }
+
+  .who_boxs{
+    display: flex;
+    width: 100%;
+    .who_box1{
+      position: absolute;
+      top: 40vh;
+      left: 0;
+      width: 20%;
+      height: 60vh;
+      background-color: rgb(228, 226, 226);
+      border-radius: 3px;
+      img{
+        position: absolute;
+        top: -20vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+      }
+    }
+    .who_box2{
+      position: absolute;
+      top: 40vh;
+      width: 20%;
+      height: 60vh;
+      background-color: rgb(228, 226, 226);
+      border-radius: 3px;
+      margin-left: 30vw;
+      img{
+        position: absolute;
+        top: -20vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1%;
+      }
+    }
+    .who_box3{
+      position: absolute;
+      top: 40vh;
+      width: 20%;
+      height: 60vh;
+      background-color: rgb(228, 226, 226);
+      border-radius: 3px;
+      margin-left: 60vw;
+      img{
+        position: absolute;
+        top: -20vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+      }
+    }
+  }
+}
+
+/*footer*/ 
+footer {
+  position: absolute;
+  top: 385vh;
+  width: 100%;
+  padding: 4vh 0 1vh 0;
+  margin-top: 6vh;
+  background-color: #333;
+  color: #fff;
+
+  .inner {
+    .agreement {
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      li {
+        font: 10px/1 "arial";
+        justify-content: center;
+        padding: 10px;
+
+        &:last-child {
+          margin-right: none;
+        }
+
+        &:not(:nth-child(1))::before {
+          content: "|";
+          color: #c8c8c8;
+          margin-right: 10px;
+        }
+
+        a {
+          color: #c8c8c8;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+        }
+      }
+    }
+
+    .btns {
+      display: flex;
+      margin-top: 1.5vh;
+      justify-content: center;
+
+      li {
+        font: 10px/1 "arial";
+
+        a {
+          text-align: center;
+          display: block;
+          width: 100px;
+          color: #fff;
+          padding: .7vh;
+          border: 1px solid #fff;
+          border-radius: 3px;
+          margin-left: 30px;
+          transition: 1s;
+
+          &:hover {
+            background-color: #fff;
+            color: #333;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .company_contents {
+      display: flex;
+      font: 10px/1 "arial";
+      padding: 3vh 0 0 0;
+      justify-content: center;
+      color: #c8c8c8;
+
+      li {
+        margin-left: 20px;
+
+        &:last-child {
+          margin-left: none;
+        }
+      }
+    }
+
+    p {
+      padding: 2vh 0;
+      font: 10px/1 "arial";
+      margin-left: 10px;
+      text-align: center;
+      color: #c8c8c8;
+    }
+  }
+
 }
