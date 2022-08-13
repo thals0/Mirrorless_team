@@ -19,7 +19,7 @@ window.addEventListener('scroll', () => {
     cameraAddto.classList.remove('on');
   }
 })
-
+ 
 //scrollY지점 확인용 코드
 window.addEventListener('scroll', () => {
   console.log(window.scrollY);
@@ -35,18 +35,7 @@ console.log(rect.y);
 
 /* 2. input창 클릭하면 나오게하는 것*/
 let inputlist = document.querySelector(".sub_list li");
-// console.log(inputlist);
 
-// inputlist.addEventListener("click", () => {
-//     if(inputlist.classList.contains('on')) {
-//       inputlist.classList.remove("on")
-//     } else{
-//       inputlist.classList.add("on")
-//     }
-    
-//   }
-// )
-// const header = document.querySelector(".inputlist");
 const inputBtn = document.querySelector(".inputlist > span i");
 console.log(inputBtn);
 // const toogleProductBtn = header.querySelector(".product__btn");
@@ -70,15 +59,25 @@ inputBtn.addEventListener("click", (e) => {
 let plus = document.querySelector(".plus");
 let minus = document.querySelector(".minus");
 let result = document.querySelector("#result")
+let totalcost = document.querySelector('.totalcost')
 let i = 1;
-plus.addEventListener("click", function () {
+plus.addEventListener("click", () => {
   i++
   result.textContent = i;
+  let totalcostNum = i*450000;
+  totalcost.textContent = "₩" + totalcostNum.toLocaleString();
 
 })
-minus.addEventListener("click", function () {
-  i--
-  result.textContent = i;
+minus.addEventListener("click", () => {
+  if(i > 0){
+    i--
+    result.textContent = i; 
+    let totalcostNum = i*450000;
+    totalcost.textContent = "₩" + totalcostNum.toLocaleString();
+    
+  }else {
+    totalcost.textContent = "₩" + 0
+  }
 })
 
 

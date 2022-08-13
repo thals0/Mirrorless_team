@@ -8,6 +8,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
 
+@font-face {
+  font-family: 'MICEGothic Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root {
   /* color */
   --color-deep-black: #111;
@@ -27,7 +34,7 @@ body {
   font: 16px/1 "Racing Sans One";
   background-color: var(--color-white);
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 header {
@@ -176,7 +183,7 @@ header {
     margin-left: 60px;
   }
 
-  .sub_title{
+  .sub_title {
     font: 20px/1 "arial";
     color: var(--color-grey);
     position: absolute;
@@ -197,14 +204,15 @@ header {
   }
 }
 
-/*about us*/
-article.intention{
+/*기획의도*/
+article.intention {
   position: relative;
   top: 40vh;
   left: 10vw;
   display: flex;
-  div{
-    img{
+
+  div {
+    img {
       position: absolute;
       top: 7vh;
       // opacity: .9;
@@ -212,184 +220,313 @@ article.intention{
       border-radius: 10px;
       z-index: 2;
     }
-    span{
-      position: absolute;
-      top: 20vh;
-      margin-left: 40vw;
-      z-index: 2;
-    }
+
+    // .intention_bg{
+    //   position: absolute;
+    //   top: 5vh;
+    //   left: -10vw;
+    //   width: 100vw;
+    //   height: 50vh;
+    //   background-color: rgb(228, 226, 226);
+    // }
   }
 
-  div{
-    .about_title{
+  div {
+    .about_title {
       position: absolute;
       top: 8vh;
       margin-left: 40vw;
       font: 50px/1 "Racing Sans One";
       z-index: 2;
     }
-  
-    .about_content{
+
+    .about_content {
       position: absolute;
       top: 12vh;
       right: 18vw;
       width: 60vw;
       height: 40vh;
-      background-color: rgb(228, 226, 226);
+      background-color: #e9dcd4;
       border-radius: 3px;
+
+      span {
+        position: absolute;
+        font: 17px/1 "MICEGothic Bold";
+        letter-spacing: .5px;
+        margin-left: 15vw;
+        z-index: 2;
+      }
+
+      span:nth-of-type(1) {
+        top: 8vh;
+      }
+
+      span:nth-of-type(2) {
+        top: 20vh;
+        font: 14px/1.2 "arial";
+      }
+
+      span:nth-of-type(3) {
+        top: 30vh;
+        font: 14px/1.2 "arial";
+      }
     }
   }
 }
 
 /*인식한 문제*/
-article.problem{
+article.problem {
   position: relative;
-  font: 140px/1 "Racing Sans One";
+  font: 140px/1 "MICEGothic Bold";
 
-  .collabo_content{
-    
-    div:nth-of-type(1){
+  .collabo_content {
+
+    // 전체 div박스 공통
+    div:not(:nth-of-type(4)) {
+      width: 35%;
+      height: 85%;
+      left: 10vw;
+      background-color: #e9dcd4;
+      border-radius: 3px;
+
+      .collabo_content_title {
+        font: 700 25px/1 "MICEGothic Bold";
+        position: absolute;
+        top: 3vh;
+        left: 3vh;
+      }
+
+      .collabo_content_text {
+        font: 15px/1.2 "arial";
+        position: absolute;
+        top: 15vh;
+        left: 5vh;
+      }
+    }
+
+    div:nth-of-type(1) {
       position: absolute;
       top: 110vh;
-      left: 10vw;
-      width: 35%;
-      height: 75%;
-      background-color:rgb(228, 226, 226);
-      border-radius: 3px;
-      img{
-        width: 40%;
+
+      img {
+        position: absolute;
+        top: -4vh;
+        right: -4vw;
+        width: 60%;
       }
-      span{
+    }
+
+    div:nth-of-type(2) {
+      position: absolute;
+      top: 150vh;
+
+      img {
+        position: absolute;
+        top: -2vh;
+        right: -.5vw;
+        width: 45%;
+      }
+    }
+
+    div:nth-of-type(3) {
+      position: absolute;
+      top: 190vh;
+
+      img {
+        position: absolute;
+        top: -3vh;
+        right: -5vw;
+        width: 70%;
+      }
+
+      span {
         position: absolute;
         top: 2vh;
         font: 10px/1 "arial";
       }
     }
-    div:nth-of-type(2){
-      position: absolute;
-      top: 150vh;
-      left: 10vw;
-      width: 35%;
-      height: 75%;
-      background-color:rgb(228, 226, 226);
-      border-radius: 3px;
-    }
-    div:nth-of-type(3){
-      position: absolute;
-      top: 190vh;
-      left: 10vw;
-      width: 35%;
-      height: 75%;
-      background-color:rgb(228, 226, 226);
-      border-radius: 3px;
-    }
+
     //orage색 원형
-    div:nth-of-type(4){
+    div:nth-of-type(4) {
       position: absolute;
-      top: 175vh;
-      right: 12vw;
-      width: 18%;
-      height: 65%;
-      background-color:var(--color-orange);
+      top: 180vh;
+      right: 10vw;
+      width: 20%;
+      height: 70%;
+      background-color: var(--color-orange);
       border-radius: 50% 50% 0 50%;
-      img{
-        width: 100%;
+
+      img {
+        width: 95%;
 
       }
     }
   }
 
-  .collabo_titile{
-    span:nth-of-type(1){
+  .collabo_titile {
+    font: 160px/1 "Racing Sans One";
+
+    span:nth-of-type(1) {
       position: absolute;
       top: 115vh;
       right: 23vw;
     }
-  
-    span:nth-of-type(2){
+
+    span:nth-of-type(2) {
       position: absolute;
-      top: 150vh;
+      top: 155vh;
       right: 6vw;
     }
-  
-    span:nth-of-type(3){
+
+    span:nth-of-type(3) {
       position: absolute;
-      top: 185vh;
+      top: 195vh;
       right: 26vw;
     }
   }
 }
 
 // 우리팀
-article.who{
-  top: 190vh;
-  left: 10vw;
+/* WRAP */
+.ourteam {
+  display: flex;
+  justify-content: left;
   position: relative;
-  font: 50px/1 "Racing Sans One";
-  
-  span{
 
-    
+  // .team_bg {
+  //   position: absolute;
+  //   top: 300vh;
+  //   left: 6vw;
+  //   transform: rotate(-5deg);
+  //   font: 270px/1 "Racing Sans One";
+  //   color: #e9e9e9;
+  // }
+  .whoweare {
+    position: absolute;
+    top: 195vh;
+    width: 45%;
+    padding: 20px;
+    background-color: #ff6602;      
+    right: 10vw;
+    text-align: right;
+    border-radius: 5px;
+    font: bold 50px/1 "Racing Sans One";
   }
 
-  .who_boxs{
-    display: flex;
-    width: 100%;
-    .who_box1{
-      position: absolute;
-      top: 40vh;
-      left: 0;
-      width: 20%;
-      height: 60vh;
-      background-color: rgb(228, 226, 226);
-      border-radius: 3px;
-      img{
-        position: absolute;
-        top: -20vh;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80%;
+  section.wrap {
+    position: relative;
+    top: 215vh;
+    left: 10vw;
+    margin-right: 70px;
+    width: 330px;
+    padding: 30px 0;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, .1);
+
+    article.profile {
+      width: 100%;
+      text-align: center;
+      margin-top: 10;
+
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        // box-shadow:5px 15px 30px rgb(255, 102, 2, .5);
+      }
+
+      h1 {
+        font: bold 40px/1 "Racing Sans One";
+        color: #000;
+        margin: 20px 0px 10px 0px;
+      }
+
+      p {
+        font: bold 20px/1 "Racing Sans One";
+        color: #999;
+        margin-bottom: 20px;
       }
     }
-    .who_box2{
-      position: absolute;
-      top: 40vh;
-      width: 20%;
-      height: 60vh;
-      background-color: rgb(228, 226, 226);
-      border-radius: 3px;
-      margin-left: 30vw;
-      img{
-        position: absolute;
-        top: -20vh;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 1%;
+
+    // 맡은 파트
+    .part {
+      span {
+        display: block;
+        width: 180px;
+        height: 32px;
+        margin: 0px auto 20px;
+        color: #000;
+        background-color: #ff6602;
+        font: bold 20px/1.3 "Racing Sans One";
+        border-radius: 16px;
+        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+        text-shadow: 0px 0px 5px rgba(255, 255, 255, .6);
+        letter-spacing: 1px;
+      }
+
+      li {
+        text-align: left;
+        font: 16px/1 "MICEGothic Bold";
+        padding: 10px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #888;
       }
     }
-    .who_box3{
-      position: absolute;
-      top: 40vh;
-      width: 20%;
-      height: 60vh;
-      background-color: rgb(228, 226, 226);
-      border-radius: 3px;
-      margin-left: 60vw;
-      img{
-        position: absolute;
-        top: -20vh;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80%;
+
+    // 기술 스택
+    .stacks {
+      padding: 20px 0;
+
+      .stack_title {
+        display: block;
+        width: 180px;
+        height: 32px;
+        margin: 0px auto 20px;
+        color: #000;
+        background-color: #ff6602;
+        font: bold 20px/1.3 "Racing Sans One";
+        border-radius: 16px;
+        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+        text-shadow: 0px 0px 5px rgba(255, 255, 255, .6);
+        letter-spacing: 1px;
+      }
+
+      .stack {
+        font: 16px/3 "MICEGothic Bold";
+
+        &:not(:last-child)::after {
+          content: "|";
+          margin: 0 15px;
+        }
+      }
+    }
+
+    .contact {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      font: 25px/1 "arial";
+
+      a {
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #000;
+        transition: 1s;
+
+        &:hover {
+          transform: scale(1.2);
+        }
       }
     }
   }
 }
 
-/*footer*/ 
+/*footer*/
 footer {
   position: absolute;
-  top: 385vh;
+  top: 440vh;
   width: 100%;
   padding: 4vh 0 1vh 0;
   margin-top: 6vh;

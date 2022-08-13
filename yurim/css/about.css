@@ -14,6 +14,12 @@ a {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: "MICEGothic Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
 :root {
   /* color */
   --color-deep-black: #111;
@@ -32,7 +38,7 @@ body {
   font: 16px/1 "Racing Sans One";
   background-color: var(--color-white);
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 header.on {
@@ -162,7 +168,7 @@ header #bars .sub_menu .sub_product li {
   width: 60%;
 }
 
-/*about us*/
+/*기획의도*/
 article.intention {
   position: relative;
   top: 40vh;
@@ -174,12 +180,6 @@ article.intention div img {
   top: 7vh;
   width: 35%;
   border-radius: 10px;
-  z-index: 2;
-}
-article.intention div span {
-  position: absolute;
-  top: 20vh;
-  margin-left: 40vw;
   z-index: 2;
 }
 article.intention div .about_title {
@@ -195,61 +195,101 @@ article.intention div .about_content {
   right: 18vw;
   width: 60vw;
   height: 40vh;
-  background-color: rgb(228, 226, 226);
+  background-color: #e9dcd4;
   border-radius: 3px;
+}
+article.intention div .about_content span {
+  position: absolute;
+  font: 17px/1 "MICEGothic Bold";
+  letter-spacing: 0.5px;
+  margin-left: 15vw;
+  z-index: 2;
+}
+article.intention div .about_content span:nth-of-type(1) {
+  top: 8vh;
+}
+article.intention div .about_content span:nth-of-type(2) {
+  top: 20vh;
+  font: 14px/1.2 "arial";
+}
+article.intention div .about_content span:nth-of-type(3) {
+  top: 30vh;
+  font: 14px/1.2 "arial";
 }
 
 /*인식한 문제*/
 article.problem {
   position: relative;
-  font: 140px/1 "Racing Sans One";
+  font: 140px/1 "MICEGothic Bold";
+}
+article.problem .collabo_content div:not(:nth-of-type(4)) {
+  width: 35%;
+  height: 85%;
+  left: 10vw;
+  background-color: #e9dcd4;
+  border-radius: 3px;
+}
+article.problem .collabo_content div:not(:nth-of-type(4)) .collabo_content_title {
+  font: 700 25px/1 "MICEGothic Bold";
+  position: absolute;
+  top: 3vh;
+  left: 3vh;
+}
+article.problem .collabo_content div:not(:nth-of-type(4)) .collabo_content_text {
+  font: 15px/1.2 "arial";
+  position: absolute;
+  top: 15vh;
+  left: 5vh;
 }
 article.problem .collabo_content div:nth-of-type(1) {
   position: absolute;
   top: 110vh;
-  left: 10vw;
-  width: 35%;
-  height: 75%;
-  background-color: rgb(228, 226, 226);
-  border-radius: 3px;
 }
 article.problem .collabo_content div:nth-of-type(1) img {
-  width: 40%;
-}
-article.problem .collabo_content div:nth-of-type(1) span {
   position: absolute;
-  top: 2vh;
-  font: 10px/1 "arial";
+  top: -4vh;
+  right: -4vw;
+  width: 60%;
 }
 article.problem .collabo_content div:nth-of-type(2) {
   position: absolute;
   top: 150vh;
-  left: 10vw;
-  width: 35%;
-  height: 75%;
-  background-color: rgb(228, 226, 226);
-  border-radius: 3px;
+}
+article.problem .collabo_content div:nth-of-type(2) img {
+  position: absolute;
+  top: -2vh;
+  right: -0.5vw;
+  width: 45%;
 }
 article.problem .collabo_content div:nth-of-type(3) {
   position: absolute;
   top: 190vh;
-  left: 10vw;
-  width: 35%;
-  height: 75%;
-  background-color: rgb(228, 226, 226);
-  border-radius: 3px;
+}
+article.problem .collabo_content div:nth-of-type(3) img {
+  position: absolute;
+  top: -3vh;
+  right: -5vw;
+  width: 70%;
+}
+article.problem .collabo_content div:nth-of-type(3) span {
+  position: absolute;
+  top: 2vh;
+  font: 10px/1 "arial";
 }
 article.problem .collabo_content div:nth-of-type(4) {
   position: absolute;
-  top: 175vh;
-  right: 12vw;
-  width: 18%;
-  height: 65%;
+  top: 180vh;
+  right: 10vw;
+  width: 20%;
+  height: 70%;
   background-color: var(--color-orange);
   border-radius: 50% 50% 0 50%;
 }
 article.problem .collabo_content div:nth-of-type(4) img {
-  width: 100%;
+  width: 95%;
+}
+article.problem .collabo_titile {
+  font: 160px/1 "Racing Sans One";
 }
 article.problem .collabo_titile span:nth-of-type(1) {
   position: absolute;
@@ -258,78 +298,127 @@ article.problem .collabo_titile span:nth-of-type(1) {
 }
 article.problem .collabo_titile span:nth-of-type(2) {
   position: absolute;
-  top: 150vh;
+  top: 155vh;
   right: 6vw;
 }
 article.problem .collabo_titile span:nth-of-type(3) {
   position: absolute;
-  top: 185vh;
+  top: 195vh;
   right: 26vw;
 }
 
-article.who {
-  top: 190vh;
-  left: 10vw;
-  position: relative;
-  font: 50px/1 "Racing Sans One";
-}
-article.who .who_boxs {
+/* WRAP */
+.ourteam {
   display: flex;
+  justify-content: left;
+  position: relative;
+}
+.ourteam .whoweare {
+  position: absolute;
+  top: 195vh;
+  width: 45%;
+  padding: 20px;
+  background-color: #ff6602;
+  right: 10vw;
+  text-align: right;
+  border-radius: 5px;
+  font: bold 50px/1 "Racing Sans One";
+}
+.ourteam section.wrap {
+  position: relative;
+  top: 215vh;
+  left: 10vw;
+  margin-right: 70px;
+  width: 330px;
+  padding: 30px 0;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+.ourteam section.wrap article.profile {
   width: 100%;
+  text-align: center;
+  margin-top: 10;
 }
-article.who .who_boxs .who_box1 {
-  position: absolute;
-  top: 40vh;
-  left: 0;
-  width: 20%;
-  height: 60vh;
-  background-color: rgb(228, 226, 226);
-  border-radius: 3px;
+.ourteam section.wrap article.profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
-article.who .who_boxs .who_box1 img {
-  position: absolute;
-  top: -20vh;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
+.ourteam section.wrap article.profile h1 {
+  font: bold 40px/1 "Racing Sans One";
+  color: #000;
+  margin: 20px 0px 10px 0px;
 }
-article.who .who_boxs .who_box2 {
-  position: absolute;
-  top: 40vh;
-  width: 20%;
-  height: 60vh;
-  background-color: rgb(228, 226, 226);
-  border-radius: 3px;
-  margin-left: 30vw;
+.ourteam section.wrap article.profile p {
+  font: bold 20px/1 "Racing Sans One";
+  color: #999;
+  margin-bottom: 20px;
 }
-article.who .who_boxs .who_box2 img {
-  position: absolute;
-  top: -20vh;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1%;
+.ourteam section.wrap .part span {
+  display: block;
+  width: 180px;
+  height: 32px;
+  margin: 0px auto 20px;
+  color: #000;
+  background-color: #ff6602;
+  font: bold 20px/1.3 "Racing Sans One";
+  border-radius: 16px;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.6);
+  letter-spacing: 1px;
 }
-article.who .who_boxs .who_box3 {
-  position: absolute;
-  top: 40vh;
-  width: 20%;
-  height: 60vh;
-  background-color: rgb(228, 226, 226);
-  border-radius: 3px;
-  margin-left: 60vw;
+.ourteam section.wrap .part li {
+  text-align: left;
+  font: 16px/1 "MICEGothic Bold";
+  padding: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #888;
 }
-article.who .who_boxs .who_box3 img {
-  position: absolute;
-  top: -20vh;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
+.ourteam section.wrap .stacks {
+  padding: 20px 0;
+}
+.ourteam section.wrap .stacks .stack_title {
+  display: block;
+  width: 180px;
+  height: 32px;
+  margin: 0px auto 20px;
+  color: #000;
+  background-color: #ff6602;
+  font: bold 20px/1.3 "Racing Sans One";
+  border-radius: 16px;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.6);
+  letter-spacing: 1px;
+}
+.ourteam section.wrap .stacks .stack {
+  font: 16px/3 "MICEGothic Bold";
+}
+.ourteam section.wrap .stacks .stack:not(:last-child)::after {
+  content: "|";
+  margin: 0 15px;
+}
+.ourteam section.wrap .contact {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font: 25px/1 "arial";
+}
+.ourteam section.wrap .contact a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #000;
+  transition: 1s;
+}
+.ourteam section.wrap .contact a:hover {
+  transform: scale(1.2);
 }
 
 /*footer*/
 footer {
   position: absolute;
-  top: 385vh;
+  top: 440vh;
   width: 100%;
   padding: 4vh 0 1vh 0;
   margin-top: 6vh;
