@@ -1,42 +1,13 @@
-let camera1 =document.querySelector(".img1");
-let camera2 =document.querySelector(".img2");
-let video = document.querySelector(".video")
+let camera1Hover = document.querySelector(".camera1");
+let ornageTitle = document.querySelector(".orange_title");
 
-
-function cameraOpcity(){
-    camera1.style.opacity = 1;
-    camera2.style.opacity = 1;
-
-}
-
-setTimeout(cameraOpcity, 9000);
-
-camera1.addEventListener('mouseover', function(){
-    camera1.style.transform = "scale(1.5)";
-    camera1.style.transition = "0.5s";
-  });
-camera1.addEventListener('mouseout', function(){
-    camera1.style.transform = "scale(1)";
-    camera1.style.transition = "0.5s";
-  });
-camera1.addEventListener('click', function(){
-    video.setAttribute("src","./video/videoreverse.mp4");
-    camera1.style.opacity ="0";
-    camera2.style.opacity ="0";
-    setTimeout("location.href='map.html'", 3500);
-  });
-camera2.addEventListener('click', function(){
-    video.setAttribute("src","./video/videoreverse.mp4");
-    camera1.style.opacity ="0";
-    camera2.style.opacity ="0";
-    setTimeout("location.href='map.html'", 3500);
-  });
-  
-camera2.addEventListener('mouseover', function(){
-    camera2.style.transform = "scale(1.5)";
-    camera2.style.transition = "0.5s";
-  });
-camera2.addEventListener('mouseout', function(){
-    camera2.style.transform = "scale(1)";
-    camera2.style.transition = "0.5s";
-  });  
+camera1Hover.addEventListener("mouseover",function(){
+  camera1Hover.style.transform ="translate(-700px,0) scale(1.5)";
+  ornageTitle.style.opacity = 0;
+})
+camera1Hover.addEventListener("mouseout",function(){
+  camera1Hover.style.transform ="translate(0px,0) scale(1)";
+  ornageTitle.style.opacity = 1;
+})
+     
+     

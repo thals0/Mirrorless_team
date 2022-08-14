@@ -10,25 +10,25 @@ const btn = document.querySelector(".button");
 const lenBtn = btn.length;
 
 const header = document.querySelector("header");
-const toogleBtn = header.querySelector(".nav__btn");
-const toogleProductBtn = header.querySelector(".product__btn");
-const bars = header.querySelector("#bars");
-const productMenu = header.querySelector(".sub_product");
+// const toogleBtn = header.querySelector(".nav__btn");
+// const toogleProductBtn = header.querySelector(".product__btn");
+// const bars = header.querySelector("#bars");
+// const productMenu = header.querySelector(".sub_product");
 
-toogleBtn.addEventListener("click", function (e) {
-  if (bars.classList.contains("active")) {
-    bars.classList.remove("active");
-  } else {
-    bars.classList.add("active");
-  }
-});
-toogleProductBtn.addEventListener("click", function (e) {
-  if (productMenu.classList.contains("active")) {
-    productMenu.classList.remove("active");
-  } else {
-    productMenu.classList.add("active");
-  }
-});
+// toogleBtn.addEventListener("click", function (e) {
+//   if (bars.classList.contains("active")) {
+//     bars.classList.remove("active");
+//   } else {
+//     bars.classList.add("active");
+//   }
+// });
+// toogleProductBtn.addEventListener("click", function (e) {
+//   if (productMenu.classList.contains("active")) {
+//     productMenu.classList.remove("active");
+//   } else {
+//     productMenu.classList.add("active");
+//   }
+// });
 
 // SWIPER PRODUCT
 // product > swiper
@@ -96,4 +96,35 @@ function addOn(t) {
   slideNum = parseInt(t.getAttribute("data-swiper-slide-index"));
   console.log(slideNum);
   listCamcoder[slideNum].classList.add("on");
+}
+
+/* custom sub페이지 +, - 누르면 증감되도록 하기*/
+// + 누르면 1 증가
+let cost = document.querySelectorAll(".cost");
+let plus = document.querySelectorAll(".plus");
+let minus = document.querySelectorAll(".minus");
+let result = document.querySelectorAll(".result");
+let totalcost = document.querySelectorAll(".totalcost");
+let k = 1;
+
+for (let i = 0; i < lenCamcoder; i++) {
+  plus[i].addEventListener("click", () => {
+    k++;
+    result[i].textContent = k;
+    const price = parseInt(cost[i].textContent);
+    let totalcostNum = k * price;
+    totalcost[i].textContent = "₩" + totalcostNum.toLocaleString();
+  });
+
+  minus[i].addEventListener("click", () => {
+    if (i > 0) {
+      k--;
+      result[i].textContent = k;
+      const price = parseInt(cost[i].textContent);
+      let totalcostNum = k * price;
+      totalcost[i].textContent = "₩" + totalcostNum.toLocaleString();
+    } else {
+      totalcost[i].textContent = "₩" + 0;
+    }
+  });
 }

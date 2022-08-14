@@ -28,31 +28,101 @@ a {
 
 /*Common*/
 body {
-  font: 16px/1 "arial";
+  font: 16px/1 "Racing Sans One";
   background-color: var(--color-white);
   overflow: hidden;
   background-color: #111;
 }
 
 /*Header*/
-header {
+header.on {
+  display: none;
+}
+header .main_header {
+  z-index: 4;
   width: 100%;
-  height: 10vh;
-  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #000;
+  transition: 1.4s;
 }
-header h1 {
-  position: absolute;
-  top: 3vh;
-  left: 2vw;
-  font: 30px/1 "Racing Sans One";
+header .main_header .logo {
+  display: flex;
+  align-items: center;
+}
+header .main_header .logo a.name {
   color: var(--color-white);
+  font: 40px/1 "Racing Sans One";
 }
-header .menu {
+header .main_header .logo a.icon {
+  margin-left: 8px;
+  font-size: 30px;
+}
+header .main_header nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+header .main_header nav ul li {
+  margin: 0px 16px;
+  cursor: pointer;
+}
+header .main_header nav ul li a {
+  color: var(--color-white);
+  margin-right: 2vw;
+}
+header #bars {
   position: absolute;
-  top: 3vh;
-  right: 2vw;
-  font-size: 20px;
-  color: var(--color-black);
+  top: 0px;
+  right: 0px;
+  display: none;
+  width: 370px;
+  height: 100%;
+  margin-left: auto;
+  font-size: 22px;
+  top: 10vh;
+  right: 0%;
+  z-index: 2;
+}
+header #bars.active {
+  display: block;
+}
+header #bars .sub_menu {
+  border: 1px solid #000;
+  background-color: #000;
+}
+header #bars .sub_menu li {
+  padding: 18px 12px;
+  transition: 0.5s;
+}
+header #bars .sub_menu li:hover {
+  background-color: #f6f6f6;
+}
+header #bars .sub_menu li:hover a {
+  color: #000;
+}
+header #bars .sub_menu li a {
+  color: #fff;
+}
+header #bars .sub_menu li a i {
+  margin: 8px;
+}
+header #bars .sub_menu li a i.fa-angle-down {
+  margin-left: 170px;
+}
+header #bars .sub_menu li .icon {
+  text-align: center;
+}
+header #bars .sub_menu .sub_product {
+  display: none;
+}
+header #bars .sub_menu .sub_product.active {
+  display: block;
+}
+header #bars .sub_menu .sub_product li {
+  font-size: 16px;
+  padding: 12px 12px 12px 42px;
 }
 
 /*title*/
@@ -108,6 +178,8 @@ header .menu {
   left: 50%;
   transform: translate(-50%, 0);
   width: 20vw;
+  transition: 1s;
+  z-index: 3;
 }
 .title article a:hover {
   background-color: var(--color-white);

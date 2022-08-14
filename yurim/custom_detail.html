@@ -6,13 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- gsap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+    integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- gsap trigger-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
+    integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- css -->
   <link rel="stylesheet" href="./css/custom_detail.css">
   <!-- js -->
-  <script defer src="./js/main.js"></script>
+  <script defer src="./js/custom_detail.js"></script>
   <!-- Fontawesome -->
   <script src="https://kit.fontawesome.com/8924a45e02.js" crossorigin="anonymous"></script>
   <title>Custom detail</title>
@@ -22,10 +26,11 @@
   <section class="details_page">
     <!-- expand -->
     <article class="expand">
-      <span class="name">CANON</span>
-      <span class="bgimg">CUS</span>
+      <span class="name">CANON XP-0013</span>
+      <span class="bgimg_cus">CUS</span>
+      <span class="bgimg_tom">TOM</span>
       <div class="img">
-          <img src="./img/custom/change1.png" alt="custom_camera">
+        <img src="./img/custom/change1.png" alt="custom_camera">
       </div>
       <div class="add-cart">
         <div class="price">
@@ -35,99 +40,117 @@
         <a href="#"> + Add to Cart</a>
       </div>
     </article>
+
     <!-- details -->
-    <article class="details">
-      <span class="bgimg">TOM</span>
-      <div class="inner">
-        <div class="title">CUSTOM CAMERA</div>
+    <article class="details_hiddenbox">
+      <div class="details">
+        <div class="inner">
+          <div class="title">CUSTOM CAMERA</div>
 
-        <div class="price">
-          <span>판매가</span>
-          <span>₩450,000</span>
-        </div>
+          <div class="price">
+            <span>판매가</span>
+            <span>₩450,000</span>
+          </div>
 
-        <div class="diy">
-          <span>DIY</span>
-          <span><i class="fa-solid fa-angle-down"></i></span>
-        </div>
+          <div class="inputlist">
+            <span class="placeholder">Custom</span>
+            <ul class="sub_list">
+              <li><a href="../somin/all.html">All</a></li>
+              <li><a href="../somin/general.html">General</a></li>
+              <li><a href="../somin/film.html">Film</a></li>
+              <li><a href="../somin/Camcoder.html">Camcoder</a></li>
+              <li><a href="./custom_detail.html">Custom</a></li>
+            </ul>
+            <span><i class="fa-solid fa-angle-down"></i></span>
+          </div>
 
-        <div class="num">
-          <span>수량</span>
-          <span class="count">
-            <a href="#" class="plus">-</a>
-            <span>1</span>
-            <a href="#" class="minus">+</a>
-          </span>
-        </div>
 
-        <div class="color">
-          <div><i class="fa-solid fa-palette"></i> Custom 색상
-            &nbsp;&nbsp;
+          <div class="num">
+            <span>수량</span>
+            <span class="count">
+              <a href="#" class="minus">-</a>
+              <span id="result">1</span>
+              <a href="#" class="plus">+</a>
+            </span>
+          </div>
+
+          <div class="color">
+            <div><i class="fa-solid fa-palette"></i> Custom 색상</div>
             <input type="Select" class="inputbox">
+            <div class="color_select">
+              <span class="color_each color1"></span>
+              <span class="color_each color2" onclick="selectColor(this.value)"></span>
+              <span class="color_each color3"></span>
+              <span class="color_each color4"></span>
+              <span class="color_each color5"></span>
+              <span class="color_each color6"></span>
+              <span class="color_each color7"></span>
+              <span class="color_each color8"></span>
+              <!-- <span class="color_each"></span> -->
+            </div>
           </div>
-          <div class="color_select">
-            <span class="color_each"></span>
-            <span class="color_each"></span>
-            <span class="color_each"></span>
-            <span class="color_each"></span>
-            <span class="color_each"></span>
-            <span class="color_each"></span>
-            <span class="color_each"></span>
-            <span class="color_each"></span>
+          <div class="emoji">
+            <div><i class="fa-solid fa-face-laugh-beam"></i> Custom 이모지
+            </div>
+            <!-- input을 span 으로 변경  : emoji를 넣기 위해-->
+            <span type="text" class="inputbox_emoji"></span>
+            <div class="emoji_select">
+              <span class="emoji_each "><i class="fa-solid fa-dog"></i></span>
+              <span class="emoji_each "><i class="fa-solid fa-cat"></i></span>
+              <span class="emoji_each "><i class="fa-brands fa-gratipay"></i></span>
+              <span class="emoji_each "><i class="fa-solid fa-heart"></i></span>
+              <span class="emoji_each "><i class="fa-solid fa-star"></i></span>
+              <span class="emoji_each "><i class="fa-solid fa-flag-checkered"></i></span>
+              <span class="emoji_each "><i class="fa-brands fa-apple"></i></span>
+              <span class="emoji_each "><i class="fa-brands fa-android"></i></span>
+              <span class="emoji_each "><i class="fa-brands fa-angrycreative"></i></span>
+              <span class="emoji_each "><i class="fa-solid fa-face-smile"></i></span>
+              <span class="emoji_each "><i class="fa-solid fa-mug-saucer"></i></span>
+              <span class="emoji_each "><i class="fa-solid fa-burger"></i></span>
+              <span class="emoji_each "><i class="fa-solid fa-earth-asia"></i></span>
+              <span class="emoji_each "><i class="fa-brands fa-ello"></i></span>
+            </div>
           </div>
-        </div>
 
-        <div class="emoji">
-          <div><i class="fa-solid fa-face-laugh-beam"></i> Custom 이모지
-            &nbsp;&nbsp;
-            <input type="Select" class="inputbox">
+          <div>
+            <span>최종 구매가</span>
+            <span class="totalcost">₩450,000</span>
           </div>
-          <div class="emoji_select">
-            <span class="emoji_each"><i class="fa-solid fa-dog"></i></span>
-            <span class="emoji_each"><i class="fa-solid fa-cat"></i></span>
-            <span class="emoji_each"><i class="fa-brands fa-gratipay"></i></span>
-            <span class="emoji_each"><i class="fa-solid fa-heart"></i></span>
-            <span class="emoji_each"><i class="fa-solid fa-star"></i></span>
-            <span class="emoji_each"><i class="fa-solid fa-flag-checkered"></i></span>
-            <span class="emoji_each"><i class="fa-brands fa-apple"></i></span>
-            <span class="emoji_each"><i class="fa-brands fa-android"></i></span>
-            <span class="emoji_each"><i class="fa-brands fa-angrycreative"></i></span>
-            <span class="emoji_each"><i class="fa-solid fa-face-smile"></i></span>
-            <span class="emoji_each"><i class="fa-solid fa-mug-saucer"></i></span>
-            <span class="emoji_each"><i class="fa-solid fa-burger"></i></span>
-            <span class="emoji_each"><i class="fa-solid fa-earth-asia"></i></span>
-            <span class="emoji_each"><i class="fa-brands fa-ello"></i></span>
+          <div class="cart">
+            <span>관심상품</span>
+            <span>장바구니</span>
+            <span class="item3">문의</span>
           </div>
-        </div>
-
-        <div>
-          <span>최종 구매가</span>
-          <span>₩450,000 (1개)</span>
-        </div>
-        <div class="cart">
-          <span>관심상품</span>
-          <span>장바구니</span>
-          <span class="item3">문의</span>
-        </div>
-        <div class="buy">구매하기</div>
-        <div class="naver">
-          <div class="logo_item">
-            <span class="logo">NAVER</span>
-            <span><br>네이버ID로 간편구매<br>네이버페이</span>
+          <div class="buy">구매하기</div>
+          <div class="naver">
+            <div class="logo_item">
+              <span class="logo">NAVER</span>
+              <span><br>네이버ID로 간편구매<br>네이버페이</span>
+            </div>
+            <span class="npay">NPay 구매</span>
+            <span class="get"><i class="fa-regular fa-heart"></i> 찜</span>
           </div>
-          <span class="npay">NPay 구매</span>
-          <span class="get"><i class="fa-regular fa-heart"></i> 찜</span>
-        </div>
-        <div class="nav_more">
-          <ul>
-            <li>설명</li>
-            <li>배송안내</li>
-            <li>교환및반품</li>
-            <li>디자인보호법</li>
-          </ul>
+          <div class="nav_more">
+            <ul>
+              <a href="#">
+                <li>설명</li>
+              </a>
+              <a href="#">
+                <li>배송안내</li>
+              </a>
+              <a href="#">
+                <li>교환및반품</li>
+              </a>
+              <a href="#">
+                <li>디자인보호법</li>
+              </a>
+            </ul>
+          </div>
         </div>
       </div>
     </article>
+
+
     <footer class="footer_copyright">
       <div class="inner">
         <ul class="agreement">

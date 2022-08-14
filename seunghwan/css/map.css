@@ -1,8 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Dongle&family=Gowun+Dodum&family=IBM+Plex+Sans+KR&family=Noto+Sans+KR:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Gowun+Dodum&family=IBM+Plex+Sans+KR&family=Noto+Sans+KR:wght@500&display=swap');
 /* font-family: 'Dongle', sans-serif;
 font-family: 'Gowun Dodum', sans-serif;
 font-family: 'IBM Plex Sans KR', sans-serif;
 font-family: 'Noto Sans KR', sans-serif; */
+/* Font
+ font-family: 'Bangers', cursive;
+ font-family: 'Racing Sans One', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
 
 .customoverlay {
   position: relative;
@@ -11,10 +16,12 @@ font-family: 'Noto Sans KR', sans-serif; */
   border-bottom: 2px solid #ddd;
   float: left;
 }
+
 .customoverlay:nth-of-type(n) {
   border: 0;
   box-shadow: 0px 1px 2px #888;
 }
+
 .customoverlay a {
   display: block;
   text-decoration: none;
@@ -24,88 +31,886 @@ font-family: 'Noto Sans KR', sans-serif; */
   font-size: 14px;
   font-weight: bold;
   overflow: hidden;
-  background: #ff6602;
-  background: #ff6602
-    url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png)
-    no-repeat right 14px center;
+  background: #FF6602;
+  background: #FF6602 url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;
 }
+
 .customoverlay .title {
   display: block;
   text-align: center;
-  background: #f3eee1;
+  background: #F3EEE1;
   margin-right: 35px;
   padding: 10px 15px;
   font-size: 14px;
   font-weight: bold;
   width: 120px;
 }
-/* .customoverlay:after {content:'';position:absolute;margin-left:-12px;left:50%;bottom:-12px;width:22px;height:12px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')} */
 
+/* .customoverlay:after {content:'';position:absolute;margin-left:-12px;left:50%;bottom:-12px;width:22px;height:12px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')} */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Font */
+:root {
+  --color-addbtn: #ff6602;
+  --color-slide: #f6f6f6;
+  --color-font: #dfdfdf;
+  --color-font: #000;
+  --color-btnFont: #fff;
+  --color-btn: #e9e9e9;
+}
+
+/* Common */
 body {
-  padding: 0px 200px;
+  font: 16px/1 "Racing Sans One";
+  width: 100%;
+  height: 100vh;
+  position: relative;
 }
-section > h1 {
+
+body.per_product {
+  overflow: hidden;
+}
+
+body.version2,
+body.all {
+  overflow: scroll;
+}
+
+/* Header */
+header {
   margin-bottom: 20px;
-  font-family: "IBM Plex Sans KR";
-  font-size: 35px;
 }
-.topContent p {
-  font-size: 16px;
+
+header.on {
+  display: none;
 }
-.input-contain {
+
+header .main_header {
+  z-index: 4;
+  width: 100%;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dfdfdf;
+  transition: 1.4s;
+}
+
+header .main_header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .main_header .logo a.name {
+  color: black;
+  font-size: 40px;
+}
+
+header .main_header .logo a.icon {
+  margin-left: 8px;
+  font-size: 30px;
+}
+
+header .main_header nav ul {
   display: flex;
 }
-.maplist {
+
+header .main_header nav ul li {
+  margin: 0px 16px;
+  cursor: pointer;
+}
+
+.login {
+  display: block;
+}
+
+.logout {
+  display: none;
+}
+
+header .main_header nav ul li a {
+  color: black;
+}
+
+header #bars {
+  display: none;
+  z-index: 100;
   position: absolute;
-  z-index: 90;
-  width: 185px;
-  height: 300px;
-  top: 35%;
-  background-color: orange;
-  border: 1px solid black;
+  width: 370px;
+  margin-left: auto;
+  font-size: 22px;
+  top: 5vw;
+  left: 65vw;
+  background-color: white;
 }
-.maplist div {
-  width: 185px;
+
+header #bars.active {
+  display: block;
+}
+
+header #bars .sub_menu {
+  border: 1px solid #000;
+}
+
+header #bars .sub_menu li {
+  padding: 18px 12px;
+  transition: 0.5s;
+}
+
+header #bars .sub_menu li:hover {
+  background-color: #f6f6f6;
+}
+
+header #bars .sub_menu li a {
+  color: #000;
+}
+
+header #bars .sub_menu li a i {
+  margin: 8px;
+}
+
+header #bars .sub_menu li a i.fa-angle-down {
+  margin-left: 170px;
+}
+
+header #bars .sub_menu li .icon {
+  text-align: center;
+}
+
+header #bars .sub_menu .sub_product {
+  display: none;
+}
+
+header #bars .sub_menu .sub_product.active {
+  display: block;
+}
+
+header #bars .sub_menu .sub_product li {
+  font-size: 14px;
+  padding: 12px 12px 12px 42px;
+}
+
+/* Header */
+/* Product */
+.product {
+  width: 100%;
+  height: 600px;
+  transition: height 0.4s;
+  transition: 1.4s;
+}
+
+.product.on {
+  opacity: 0;
+}
+
+.product .swiper {
+  cursor: pointer;
+  overflow: visible;
+  width: 20vw;
+  height: 70vh;
+  text-align: center;
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.product .swiper .swiper-wrapper .swiper-slide {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transition: 0.4s;
+}
+
+.product .swiper .swiper-wrapper .swiper-slide:hover {
+  background-color: var(--color-slide);
+  box-shadow: 5px 5px 10px rgba(246, 246, 246, 0.9);
+}
+
+.product .swiper .swiper-wrapper .swiper-slide:hover .name,
+.product .swiper .swiper-wrapper .swiper-slide:hover .add-cart {
+  opacity: 1;
+}
+
+.product .swiper .swiper-wrapper .swiper-slide:hover img {
+  transform: scale(1.8);
+}
+
+.product .swiper .swiper-wrapper .swiper-slide .name {
+  display: block;
+  margin: 20px 0 10px 20px;
+  text-align: left;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: var(--color-font);
+  opacity: 0;
+  transition: 0.8s;
+}
+
+.product .swiper .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  transition: 0.8s;
+}
+
+.product .swiper .swiper-wrapper .swiper-slide img.general {
+  width: 75%;
+  margin: 0px auto;
+  transition: 0.8s;
+}
+
+.product .swiper .swiper-wrapper .swiper-slide img.film {
+  width: 120%;
+  transition: 0.8s;
+}
+
+.product .swiper .swiper-wrapper .swiper-slide .add-cart {
+  transition: 0.8s;
+  opacity: 0;
+  margin: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  bottom: 0px;
+}
+
+.product .swiper .swiper-wrapper .swiper-slide .add-cart .price {
+  color: var(--color-font);
+}
+
+.product .swiper .swiper-wrapper .swiper-slide .add-cart .price span {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.product .swiper .swiper-wrapper .swiper-slide .add-cart .price strong {
+  font-size: 32px;
+  opacity: 1;
+}
+
+.product .swiper .swiper-wrapper .swiper-slide .add-cart a {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-addbtn);
+  border-radius: 5px;
+  font-size: 20px;
+  line-height: 40px;
+  color: var(--color-btnFont);
+  box-shadow: 5px 5px 10px rgba(255, 102, 2, 0.2);
+}
+
+.all-products {
+  margin-top: 30px;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.all-products .title {
+  margin: 40px;
+  font: bold 28px/1 "arial";
+}
+
+.all-products .container {
+  width: 100%;
+  height: 100%;
+}
+
+.all-products .container .items {
+  margin: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.all-products .container .items .item {
+  margin: 30px;
+}
+
+.all-products .container .items .item .img {
+  width: 15vw;
+  height: 15vw;
+}
+
+.all-products .container .items .item .img img {
+  width: 100%;
+  transition: 0.4s;
+}
+
+.all-products .container .items .item .img img:hover {
+  transform: scale(1.3);
+}
+
+.all-products .container .items .item .img img.general {
+  margin: 20px;
+  width: 70%;
+}
+
+.all-products .container .items .item .info .name {
+  font: bold 20px/1 "arial";
+  margin-bottom: 8px;
+}
+
+.all-products .container .items .item .info .name:hover {
+  text-decoration: underline;
+}
+
+.all-products .container .items .item .info .price {
+  font: normal 18px/1 "arial";
+}
+
+/* Detail */
+.details_products {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0%;
+  left: 0%;
+}
+
+.details_page {
+  font-family: "Racing Sans One";
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transition: ease 1.4s;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.details_page.on {
+  transform: scale(1);
+}
+
+.details_page.on .expand {
+  border-radius: 0px;
+}
+
+.details_page.on .details {
+  transition-delay: 1s;
+  opacity: 1;
+}
+
+.details_page .expand {
+  width: 40%;
+  height: 100%;
+  background-color: #e9e9e9;
+  position: relative;
+  transition: 1.4s;
+  border-radius: 100px;
+}
+
+.details_page .expand .name {
+  display: block;
+  margin: 60px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  transition: 0.4s;
+}
+
+.details_page .expand .img {
+  position: absolute;
+  top: -10%;
+  width: 56vw;
+  height: 20vw;
+  z-index: 1;
+}
+
+.details_page .expand .img img {
+  width: 100%;
+  margin-left: 10vw;
+}
+
+.details_page .expand .img.general {
+  position: absolute;
+  top: 8%;
+  left: 12%;
+  width: 53vw;
+  height: 20vw;
+  z-index: 1;
+}
+
+.details_page .expand .img.general img {
+  width: 80%;
+}
+
+.details_page .expand .add-cart {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 35vw;
+}
+
+.details_page .expand .add-cart .price span {
+  font-size: 22px;
+}
+
+.details_page .expand .add-cart .price strong {
+  font-size: 32px;
+}
+
+.details_page .expand .add-cart a {
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 5px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.details_page .details {
+  position: relative;
+  font: normal 14px/1 "airal";
+  width: 60%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.details_page .details .inner {
+  position: absolute;
+  top: 5vh;
+  margin-left: 14vw;
+  width: 30vw;
+}
+
+.details_page .details .inner>div {
+  margin: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details_page .details .inner .title {
+  font: bolder 18px/1 "airal";
+}
+
+.details_page .details .inner .diy {
+  cursor: pointer;
+  padding: 12px;
+  border: 1px solid #000;
+}
+
+.details_page .details .inner .more {
+  display: none;
+  font: normal 12px/1 "airal";
+}
+
+.details_page .details .inner .num {
+  padding-right: 40px;
+  align-items: center;
+}
+
+.details_page .details .inner .num .count {
+  display: flex;
+  align-items: center;
+}
+
+.details_page .details .inner .num .count a {
+  cursor: pointer;
+  color: #000;
+  font-size: 26px;
+  opacity: 0.7;
+}
+
+.details_page .details .inner .num .count span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin: 0px 8px;
+}
+
+.details_page .details .inner .cart {
+  margin-bottom: 0px;
+  display: flex;
+}
+
+.details_page .details .inner .cart span {
+  border-radius: 2px;
+  text-align: center;
+  line-height: 50px;
+  width: 135px;
   height: 50px;
+  border: 1px solid #000;
 }
-.maphover {
-  background-color: skyblue;
+
+.details_page .details .inner .cart span.item3 {
+  width: 60px;
+  background-color: #000;
+  color: #fff;
 }
-.input-contain > div {
+
+.details_page .details .inner .buy {
+  border-radius: 1px;
+  margin: 8px 40px;
+  display: block;
+  height: 50px;
+  border: 1px solid #000;
+  text-align: center;
+  line-height: 50px;
+}
+
+.details_page .details .inner .naver {
+  margin-left: 6vw;
+  margin-top: 12px;
+  border-top: 2px solid #000;
+  padding: 8px;
+  width: 70%;
+  display: flex;
+}
+
+.details_page .details .inner .naver .logo_item {
+  padding-top: 4px;
+  font-size: 10px;
+}
+
+.details_page .details .inner .naver .logo_item .logo {
+  color: #1fcd63;
+  font-weight: bolder;
+}
+
+.details_page .details .inner .naver .npay {
+  width: 150px;
+  height: 37px;
+  text-align: center;
+  line-height: 37px;
+  border: 1px solid #777;
+  background-color: #1fcd63;
+  color: #fff;
+}
+
+.details_page .details .inner .naver .get {
+  width: 37px;
+  height: 37px;
+  text-align: center;
+  line-height: 37px;
+  color: #1fcd63;
+  border: 1px solid #777;
+  background-color: #fff;
+}
+
+.details_page .details .inner .nav_more {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.details_page .details .inner .nav_more ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details_page .details .inner .nav_more ul li {
+  padding-right: 18px;
+}
+
+.details_page .details .inner .nav_more ul li:not(:last-child) {
+  border-right: 1px solid #666;
+}
+
+.details_page .details .inner .more {
+  display: none;
+}
+
+/* BTN */
+.all .button.all {
+  width: 100%;
+  height: 70px;
+  padding-top: 30px;
+}
+
+.button {
+  width: 100%;
+}
+
+.button:not(.all) {
+  position: absolute;
+  top: 15%;
+}
+
+.button ul {
+  display: flex;
+  justify-content: center;
+}
+
+.button ul li {
+  width: 100px;
+  height: 50px;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 8px;
+  text-align: center;
+  line-height: 32px;
+  background-color: #e9e9e9;
+}
+
+.button ul li a {
+  font: normal 16px/1 "airal";
+  color: #787878;
+}
+.warp{
+  padding: 0px 150px;
+}
+
+.upButton {
+  position: fixed;
+  right: 5%;
+  bottom: 10%;
+}
+
+section>h1 {
+  margin-bottom: 20px;
+  font-family: "Racing Sans One";
+  font-size: 35px;
+}
+
+.topContent p {
+  font-size: 16px;
+  font-family: "arial";
+  color: #888;
+}
+
+.input-contain {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.input-contain article {
+  width: 100%;
+  position: relative;
+}
+
+
+.input-contain>div {
   margin-right: 30px;
   margin-top: 30px;
   margin-bottom: 30px;
+
 }
-.input {
+
+.input-contain .mapSearch1 i {
+  position: absolute;
+  left: 16vw;
+  top: 20%;
+  transform: rotate(0deg);
+  transition: 0.5s;
+  color: black;
+}
+
+.input1 {
   position: relative;
-  width: 260px;
+  width: 17vw;
   height: 30px;
   border-bottom: 3px solid gray;
   margin-bottom: 20px;
+  color: #ccc;
+  text-align: center;
+  cursor: pointer;
 }
-.input i {
+
+.input_list1 {
   position: absolute;
-  right: 2%;
-  top: 20%;
+  z-index: 100;
+  top: 65%;
+  width: 17vw;
+  background-color: beige;
+  display: none;
 }
+
+.input_list1 .input_list_chart1 {
+  width: 100%;
+  height: 40px;
+  font-family: "Noto Sans KR";
+  text-align: center;
+  line-height: 40px;
+}
+
+.input_list1 .input_list_chart1:hover {
+  background-color: orange;
+}
+
+.input-contain .mapSearch2 i {
+  position: absolute;
+  left: 16vw;
+  top: 20%;
+  transform: rotate(0deg);
+  transition: 0.5s;
+  color: black;
+}
+
+.input2 {
+  position: relative;
+  width: 17vw;
+  height: 30px;
+  border-bottom: 3px solid gray;
+  margin-bottom: 20px;
+  color: #ccc;
+  text-align: center;
+  cursor: pointer;
+}
+
+.input_list2 {
+  position: absolute;
+  z-index: 100;
+  top: 65%;
+  width: 17vw;
+  background-color: beige;
+  display: none;
+}
+
+.input_list2 .input_list_chart2 {
+  width: 100%;
+  height: 40px;
+  font-family: "Noto Sans KR";
+  text-align: center;
+  line-height: 40px;
+}
+
+.input_list2 .input_list_chart2:hover {
+  background-color: orange;
+}
+
+.input-contain .mapSearch3 i {
+  position: absolute;
+  left: 16vw;
+  top: 20%;
+  transform: rotate(0deg);
+  transition: 0.5s;
+  color: black;
+}
+
+.input3 {
+  position: relative;
+  width: 17vw;
+  height: 30px;
+  border-bottom: 3px solid gray;
+  margin-bottom: 20px;
+  color: #ccc;
+  text-align: center;
+  cursor: pointer;
+}
+
+.input_list3 {
+  position: absolute;
+  z-index: 100;
+  top: 65%;
+  width: 17vw;
+  background-color: beige;
+  display: none;
+}
+
+.input_list3 .input_list_chart3 {
+  width: 100%;
+  height: 40px;
+  font-family: "Noto Sans KR";
+  text-align: center;
+  line-height: 40px;
+}
+
+.input_list3 .input_list_chart3:hover {
+  background-color: orange;
+}
+
+.input-contain .mapSearch4 i {
+  position: absolute;
+  left: 16vw;
+  top: 20%;
+  transform: rotate(0deg);
+  transition: 0.5s;
+  color: black;
+}
+
+.input4 {
+  position: relative;
+  width: 17vw;
+  height: 30px;
+  border-bottom: 3px solid gray;
+  margin-bottom: 20px;
+  color: #ccc;
+  text-align: center;
+  cursor: pointer;
+}
+
+.input_list4 {
+  position: absolute;
+  z-index: 100;
+  top: 65%;
+  width: 17vw;
+  background-color: beige;
+  display: none;
+}
+
+.input_list4 .input_list_chart4 {
+  width: 100%;
+  height: 40px;
+  font-family: "Noto Sans KR";
+  text-align: center;
+  line-height: 40px;
+}
+
+.input_list4 .input_list_chart4:hover {
+  background-color: orange;
+}
+
 .kakao {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 500px;
 }
+
 .kakao #map {
   width: 100%;
-  height: 70%;
+  height: 100%;
 }
+
 .shopcontainer {
   position: relative;
   width: 100%;
 }
+
 .shopcontainer h1 {
-  margin-bottom: 30px;
-  font-family: "IBM Plex Sans KR";
+  margin: 20px 0px;
+  font-family: "Racing Sans One";
   font-size: 35px;
+
 }
+
 .shop {
   display: flex;
   flex-wrap: wrap;
@@ -113,24 +918,32 @@ section > h1 {
   width: 100%;
   height: 100%;
 }
-.shop .shop_1 {
-}
-.shop .shop_1 a {
-}
+
+.shop .shop_1 {}
+
+.shop .shop_1 a {}
+
 .shop .shop_1 a img {
-  width: 20vw;
+  width: 17vw;
   height: 20vh;
+  object-fit: cover;
+
 }
+
 .shop .shop_1 .shop__content {
-  width: 20vw;
-  height: 25vh;
+  width: 17vw;
+  height: 15vh;
 }
+
 .shop .shop_1 .shop__content h4 {
-  margin-bottom: 20px;
+  margin: 0px;
   font-size: 16px;
   font-family: "Noto Sans KR";
+
 }
+
 .shop .shop_1 .shop__content p {
+  margin-top: 10px;
   font-size: 14px;
   font-family: "Noto Sans KR";
 }

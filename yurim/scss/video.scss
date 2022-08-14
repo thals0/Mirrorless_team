@@ -98,14 +98,14 @@ h1 {
   // left: 0;
   z-index: 3;
 
-  // .filmcamera{
-  //   color: var(--color-white);
-  // }
-  // span{
-  //   strong{
-  //     color: #ff6602;
-  //   }
-  // }
+  .filmcamera{
+    color: var(--color-white);
+  }
+  span{
+    strong{
+      color: #ff6602;
+    }
+  }
 }
 @media (min-width: 419px) {
   h1 {
@@ -145,3 +145,22 @@ h1 {
   color: #111;
   background: #ff6602;
 }
+
+// .orange{
+//   // position: absolute;
+//   // top: 0;
+//   // left: 0;
+//   width: 100%;
+//   height: 100vh;
+//   background-image: url(../orangebuliding.jpg);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+
+//   .orange_title{
+//     position: absolute;
+//     top: 15vh;
+//     left: 10vw;
+//     font: 180px/1 "Racing Sans One";
+//   }
+
+// }
