@@ -117,7 +117,7 @@ for (let i = 0; i < lenCamcoder; i++) {
   });
 
   minus[i].addEventListener("click", () => {
-    if (i > 0) {
+    if (k > 0) {
       k--;
       result[i].textContent = k;
       const price = parseInt(cost[i].textContent);
