@@ -4,17 +4,17 @@
 // Font
 // font-family: 'Bangers', cursive;
 // font-family: 'Racing Sans One', cursive;
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
 
 :root {
   /* color */
   --color-deep-black: #111;
   --color-black: #3f454d;
   --color-white: #fff;
-  --color-blue: #A6D1E6;
-  --color-yellow: #FFC54D;
-  --color-pink: #FF869E;
+  --color-blue: #a6d1e6;
+  --color-yellow: #ffc54d;
+  --color-pink: #ff869e;
   --color-grey: rgb(149, 146, 146);
   --color-light-grey: #dfdfdf;
   --color-dd: #f3eee1;
@@ -53,7 +53,7 @@
       left: 2vw;
       display: inline-block;
       color: var(--color-orange);
-      opacity: .65;
+      opacity: 0.65;
       font: normal 300px/1 "Racing Sans One";
     }
 
@@ -63,7 +63,7 @@
       right: -45vw;
       display: inline-block;
       color: #c8c8c8;
-      opacity: .65;
+      opacity: 0.65;
       font: normal 300px/1 "Racing Sans One";
     }
 
@@ -152,7 +152,7 @@
     top: 10vh;
     // bottom: 10vh;
     right: -40vh;
-    width: 70%;    
+    width: 70%;
 
     .details {
       position: relative;
@@ -163,8 +163,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      overflow-X: hidden;
-      overflow-Y: scroll;
+      overflow-x: hidden;
+      overflow-y: scroll;
 
       .inner {
         position: absolute;
@@ -172,7 +172,7 @@
         margin-left: 14vw;
         width: 30vw;
 
-        >div {
+        > div {
           margin: 40px;
           display: flex;
           justify-content: space-between;
@@ -182,68 +182,65 @@
           font: bolder 18px/1 "airal";
         }
 
-      .inputlist{
-        cursor: pointer;
-        border: 1px solid #000;
-        height: 30px;
-        position: relative;
-        // transition: 4s;
+        .inputlist {
+          cursor: pointer;
+          border: 1px solid #000;
+          height: 30px;
+          position: relative;
+          // transition: 4s;
 
-        .placeholder{
-          position: absolute;
-          top: 30%;
-          left: 10%;
-          transform: translate(-50%, 0);
-          color: #888;
-        }
-
-        i{
-          position: absolute;
-          top: 50%;
-          right: 2%;
-          transform: translate(-50%, -50%);
-          
-        }
-        .sub_list{
-          display: none;
-
-          &.active{
-            display: block;
-            z-index: 3;
+          .placeholder {
             position: absolute;
-            top: 30px;
-            left: -1px;
-            
-            li{
-              padding: 2vh;
-              border: 1px solid #777;
-              width: 21.5vw;
-              background-color: var(--color-white);
-              transition: 1s;
+            top: 30%;
+            left: 10%;
+            transform: translate(-50%, 0);
+            color: #888;
+          }
 
-              &:not(:first-child){
-                border-top: none;
-              }
+          i {
+            position: absolute;
+            top: 50%;
+            right: 2%;
+            transform: translate(-50%, -50%);
+          }
+          .sub_list {
+            display: none;
 
-              &:hover{
-                background-color: var(--color-deep-black);
-                a{
-                  color: #fff;
+            &.active {
+              display: block;
+              z-index: 3;
+              position: absolute;
+              top: 30px;
+              left: -1px;
+
+              li {
+                padding: 2vh;
+                border: 1px solid #777;
+                width: 22.4vw;
+                background-color: var(--color-white);
+                transition: 1s;
+
+                &:not(:first-child) {
+                  border-top: none;
+                }
+
+                &:hover {
+                  background-color: var(--color-deep-black);
+                  a {
+                    color: #fff;
+                  }
+                }
+
+                a {
+                  color: var(--color-deep-black);
+
+                  &:hover {
+                  }
                 }
               }
-              
-              a{
-                color: var(--color-deep-black);
-
-                &:hover{
-                  
-                }
-              }
-              
             }
           }
         }
-      }
 
         .more {
           display: none;
@@ -316,8 +313,8 @@
               border-radius: 50%;
               text-align: center;
               line-height: 30px;
-              border: .5px solid #555;
-              transition: .5s;
+              border: 0.5px solid #555;
+              transition: 0.5s;
 
               &:nth-child(1) {
                 background-color: #f36969;
@@ -369,7 +366,7 @@
             left: 18vh;
             width: 10vw;
             height: 4vh;
-            border: .5px solid #555;
+            border: 0.5px solid #555;
             border-radius: 3px;
             box-sizing: border-box;
             background-color: #fff;
@@ -396,7 +393,7 @@
               border-radius: 50%;
               text-align: center;
               line-height: 30px;
-              transition: .5s;
+              transition: 0.5s;
 
               &:hover {
                 transform: scale(1.3);
@@ -451,7 +448,7 @@
           line-height: 50px;
           transition: 1s;
 
-          &:hover{
+          &:hover {
             background-color: var(--color-deep-black);
             color: var(--color-white);
           }
@@ -527,7 +524,6 @@
             }
           }
         }
-
       }
     }
   }
