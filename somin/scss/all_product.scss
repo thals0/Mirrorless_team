@@ -22,6 +22,14 @@
   height: 100vh;
   display: flex;
   // position: relative;
+
+  a.close {
+    position: absolute;
+    top: 4%;
+    right: 5%;
+    z-index: 1;
+    color: #000;
+  }
   .expand {
     width: 40%;
     height: 100%;

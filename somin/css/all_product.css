@@ -33,6 +33,13 @@ a {
   height: 100vh;
   display: flex;
 }
+.details_page a.close {
+  position: absolute;
+  top: 4%;
+  right: 5%;
+  z-index: 1;
+  color: #000;
+}
 .details_page .expand {
   width: 40%;
   height: 100%;
