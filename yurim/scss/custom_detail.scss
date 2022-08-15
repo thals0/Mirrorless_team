@@ -179,7 +179,11 @@
         }
 
         .title {
-          font: bolder 18px/1 "airal";
+          font: bold 18px/1 "airal";
+
+          i{
+            font-size: 16px;
+          }
         }
 
         .inputlist {

@@ -236,7 +236,10 @@ footer .inner p {
   justify-content: space-between;
 }
 .details_page .details_hiddenbox .details .inner .title {
-  font: bolder 18px/1 "airal";
+  font: bold 18px/1 "airal";
+}
+.details_page .details_hiddenbox .details .inner .title i {
+  font-size: 16px;
 }
 .details_page .details_hiddenbox .details .inner .inputlist {
   cursor: pointer;
