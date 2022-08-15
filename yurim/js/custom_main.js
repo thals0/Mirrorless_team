@@ -52,4 +52,9 @@ function changeCameraImg() {
   }
 }
 
-
+function sendLinkCustom() {
+  Kakao.init("b1a67a8304b174c1e613bca5bcb40c41");
+  Kakao.Link.sendCustom({
+      templateId: 81334
+  });
+}
