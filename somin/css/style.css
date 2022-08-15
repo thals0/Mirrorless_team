@@ -344,12 +344,12 @@ header #bars .sub_menu .sub_product li {
   z-index: 1;
 }
 .details_page .expand .img img {
-  width: 100%;
+  width: 90%;
   margin-left: 10vw;
 }
 .details_page .expand .img.camcoder1 {
   top: 7%;
-  left: -36%;
+  left: -30%;
 }
 .details_page .expand .img.general {
   position: absolute;
