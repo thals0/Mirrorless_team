@@ -139,3 +139,10 @@ selectEmojies.forEach((el) => {
     inputBox_emoji.innerHTML = el.innerHTML;
   });
 });
+Kakao.init("b1a67a8304b174c1e613bca5bcb40c41");
+
+function sendLinkCustom() {
+  Kakao.Link.sendCustom({
+      templateId: 81334
+  });
+}
