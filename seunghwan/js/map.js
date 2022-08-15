@@ -270,7 +270,7 @@ for (var i = 0; i < positions.length; i ++) {
             map: map, // 마커를 표시할 지도
             position: positions[i].latlng, // 마커를 표시할 위치
             title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-            image : markerImage // 마커 이미지
+            image : markerImage3 // 마커 이미지
         });
     }
     else if(i < 8){
@@ -355,10 +355,15 @@ let inputListChart1 =document.querySelectorAll(".input_list_chart1");
 input1.addEventListener("click",function(){
     if(inputList1.style.display === "none"){
         inputList1.style.display = "block";
+        inputList2.style.display = "none";
+        inputList3.style.display = "none";
+        inputList4.style.display = "none";
+
         inputI1.style.transform = "rotateX(180deg)";
     }
     else{
         inputList1.style.display = "none";
+        
         inputI1.style.transform = "rotateX(0deg)";
 
     }
@@ -379,6 +384,9 @@ let inputListChart2 =document.querySelectorAll(".input_list_chart2");
 input2.addEventListener("click",function(){
     if(inputList2.style.display === "none"){
         inputList2.style.display = "block";
+        inputList1.style.display = "none";
+        inputList3.style.display = "none";
+        inputList4.style.display = "none";
         inputI2.style.transform = "rotateX(180deg)";
     }
     else{
@@ -403,6 +411,9 @@ let inputListChart3 =document.querySelectorAll(".input_list_chart3");
 input3.addEventListener("click",function(){
     if(inputList3.style.display === "none"){
         inputList3.style.display = "block";
+        inputList1.style.display = "none";
+        inputList2.style.display = "none";
+        inputList4.style.display = "none";
         inputI3.style.transform = "rotateX(180deg)";
     }
     else{
@@ -427,6 +438,9 @@ let inputListChart4 =document.querySelectorAll(".input_list_chart4");
 input4.addEventListener("click",function(){
     if(inputList4.style.display === "none"){
         inputList4.style.display = "block";
+        inputList1.style.display = "none";
+        inputList2.style.display = "none";
+        inputList3.style.display = "none";
         inputI4.style.transform = "rotateX(180deg)";
     }
     else{

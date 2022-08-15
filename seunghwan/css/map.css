@@ -104,7 +104,7 @@ header.on {
 header .main_header {
   z-index: 4;
   width: 100%;
-  padding: 20px 0px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -689,8 +689,9 @@ header #bars .sub_menu .sub_product li {
 
 .upButton {
   position: fixed;
-  right: 5%;
+  right: 2%;
   bottom: 10%;
+  color: black;
 }
 
 section>h1 {
