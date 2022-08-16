@@ -375,6 +375,7 @@ header #bars .sub_menu .sub_product li {
   font-size: 32px;
 }
 .details_page .expand .add-cart a {
+  z-index: 1;
   cursor: pointer;
   width: 120px;
   height: 40px;
