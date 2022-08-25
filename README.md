@@ -40,7 +40,11 @@
  - Custom detail page 수량 선택 시 수량이 증가하며 그에 따라 결제 금액이 함께 증가하는 함수 제작 <br/><br/>
 
  
-2. 모승환
+2. 모승환 -Map page, kakao API구현
+ - Map page UI 구현
+ - Kakao map을 사용하여 가게 위치 표시
+ - login page에 kakao login 기능을 추가하여 구현.
+ - custom detail page 공유하기 기능을 구현.
 
 3. 이소민<br/><br/>
 
