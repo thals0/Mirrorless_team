@@ -45,13 +45,25 @@
  - Kakao map을 사용하여 가게 위치 표시
  - login page에 kakao login 기능을 추가하여 구현.
  - custom detail page 공유하기 기능을 구현.
+ 
+ <br/><br/>
 
-3. 이소민<br/><br/>
-
-
+3. 이소민 - 이벤트 팝업 창, Store, Product Detail, Login page UI 디자인 및 구현 
+ - 이벤트 팝업 창 UI 구성 및 구현
+ - flex를 이용한 All Product page 구현 
+ - Product detail page 구현 
+ - swiper library를 통해 General, film, camcoder 페이지 구현 
+ - display, scale를 활용하여 제품 클릭시 detail page 보이게 함 
+ - Login page UI 구성 및 구현
+ - SCSS를 활용한 전반적인 CSS 구현 
+ - SCSS를 이용하여 header 구현 
+ - JavaScript를 활용하여 detail page 수량 선택 기능 구현
+ 
+<br/><br/>
 
 ### ⛑ 기술스택
 - HTML
 - CSS / SCSS
 - JAVASCRIPT / JQUERY
+- SWIPER 
 - GSSAP
