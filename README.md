@@ -45,9 +45,7 @@
  - Kakao map을 사용하여 가게 위치 표시
  - login page에 kakao login 기능을 추가하여 구현.
  - custom detail page 공유하기 기능을 구현.
- 
  <br/><br/>
-
 3. 이소민 - 이벤트 팝업 창, Store, Product Detail, Login page UI 디자인 및 구현 
  - 이벤트 팝업 창 UI 구성 및 구현
  - flex를 이용한 All Product page 구현 
