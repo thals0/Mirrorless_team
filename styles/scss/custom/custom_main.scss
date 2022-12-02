@@ -1,0 +1,237 @@
+@charset "utf-8";
+@import "reset";
+// Font
+// font-family: 'Bangers', cursive;
+// font-family: 'Racing Sans One', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+
+
+:root {
+  /* color */
+  --color-black : #3f454d;
+  --color-white : #fff;
+  --color-blue : #A6D1E6;
+  --color-yellow : #FFC54D;
+  --color-pink : #FF869E;
+  --color-grey : rgb(149, 146, 146);
+  --color-light-grey : #dfdfdf;
+  --color-dd : #f3eee1;
+  --color-orange : #ff6602;
+}
+
+
+/*Common*/
+body {
+  font: 16px/1 "Racing Sans One";
+  background-color: var(--color-white);
+  overflow: hidden;
+  // background-color: var(--color-orange);
+  background-color: #111;
+}
+
+/*Header*/
+// header {
+//   width: 100%;
+//   height: 10vh;
+//   position: relative;
+
+//   h1 {
+//     position: absolute;
+//     top: 3vh;
+//     left: 2vw;
+//     font: 30px/1 'Racing Sans One';
+//     color: var(--color-white);
+//   }
+
+//   .menu {
+//     position: absolute;
+//     top: 3vh;
+//     right: 2vw;
+//     font-size: 20px;
+//     color: var( --color-white);
+//   }
+// }
+
+header {
+  &.on {
+    display: none;
+  }
+  .main_header {
+    z-index: 4;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    transition: 1.4s;
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      a.name {
+        color: var(--color-white);
+        font: 40px/1 "Racing Sans One";
+      }
+      a.icon {
+        margin-left: 8px;
+        font-size: 30px;
+      }
+    }
+    nav {
+      ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+          margin: 0px 16px;
+          cursor: pointer;
+          a {
+            color: var(--color-white);
+            margin-right: 2vw;
+          }
+        }
+      }
+    }
+  }
+
+  #bars {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+    width: 370px;
+    height: 100%;
+    margin-left: auto;
+
+    font-size: 22px;
+    // text-align: center;
+
+    top: 10vh;
+    right: 0%;
+    z-index: 2;
+
+    .sub_menu {
+      border: 1px solid #000;
+      background-color: #000;
+
+      li {
+        padding: 18px 12px;
+        transition: 0.5s;
+
+        &:hover {
+          background-color: #f6f6f6;
+          a{
+            color: #000;
+          }
+        }
+
+        a {
+          i {
+            margin: 8px;
+            &.fa-angle-down {
+              margin-left: 170px;
+            }
+          }
+          color: #fff;
+        }
+
+        .icon {
+          text-align: center;
+        }
+
+
+      }
+
+      .sub_product {
+        display: none;
+        &.active {
+          display: block;
+        }
+        li {
+          font-size: 16px;
+          // margin: 12px 0px 0px 30px;
+          // padding: 8px 12px;
+          padding: 12px 12px 12px 42px;
+        }
+      }
+    }
+  }
+}
+
+
+  /*title*/
+  .title {
+    width: 100%;
+    height: 100vh;
+    position:relative;
+    overflow: hidden;
+
+    article {
+      position: absolute;
+      top: 5vh;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      
+      
+      img{
+        position: absolute;
+        top: 15vh;
+        left: 50%;
+        transform: translate(-50%, 0);
+        display: block;
+        width: 500px;
+        z-index: 3;
+      }
+      
+
+      h2 {
+        font: 60px/1 "Racing Sans One";
+        display: flex;
+        justify-content: center;
+        color: var(--color-orange);
+        // color: var(--color-deep-black);
+      }
+
+      .bgtitle1{
+        font: 200px/1 "Racing Sans One";
+        color: #c8c8c8;
+        position: absolute;
+        top: 15vh;
+        left: -40vh;
+      }
+
+      .bgtitle2{
+        font: 200px/1 "Racing Sans One";
+        color: #c8c8c8;
+        position: absolute;
+        top: 45vh;
+        left: 5vh;
+      }
+
+      a {
+        color: var(--color-white);
+        background-color: var(--color-black);
+        border-radius: 5px;
+        padding: 1vh;
+        position: absolute;
+        top: 80vh;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 20vw;
+        transition: 1s;
+        z-index: 3;
+
+        &:hover{
+          background-color: var(--color-white);
+          color: var(--color-black);
+        }
+      }
+    }
+  }

@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  /* color */
+  --color-black: #3f454d;
+  --color-white: #fff;
+  --color-blue: #A6D1E6;
+  --color-yellow: #FFC54D;
+  --color-pink: #FF869E;
+  --color-grey: rgb(149, 146, 146);
+  --color-light-grey: #dfdfdf;
+  --color-dd: #f3eee1;
+  --color-orange: #ff6602;
+}
+
+/*Common*/
+body {
+  font: 16px/1 "Racing Sans One";
+  background-color: var(--color-white);
+  overflow: hidden;
+  background-color: #111;
+}
+
+/*Header*/
+header.on {
+  display: none;
+}
+header .main_header {
+  z-index: 4;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #000;
+  transition: 1.4s;
+}
+header .main_header .logo {
+  display: flex;
+  align-items: center;
+}
+header .main_header .logo a.name {
+  color: var(--color-white);
+  font: 40px/1 "Racing Sans One";
+}
+header .main_header .logo a.icon {
+  margin-left: 8px;
+  font-size: 30px;
+}
+header .main_header nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+header .main_header nav ul li {
+  margin: 0px 16px;
+  cursor: pointer;
+}
+header .main_header nav ul li a {
+  color: var(--color-white);
+  margin-right: 2vw;
+}
+header #bars {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: none;
+  width: 370px;
+  height: 100%;
+  margin-left: auto;
+  font-size: 22px;
+  top: 10vh;
+  right: 0%;
+  z-index: 2;
+}
+header #bars.active {
+  display: block;
+}
+header #bars .sub_menu {
+  border: 1px solid #000;
+  background-color: #000;
+}
+header #bars .sub_menu li {
+  padding: 18px 12px;
+  transition: 0.5s;
+}
+header #bars .sub_menu li:hover {
+  background-color: #f6f6f6;
+}
+header #bars .sub_menu li:hover a {
+  color: #000;
+}
+header #bars .sub_menu li a {
+  color: #fff;
+}
+header #bars .sub_menu li a i {
+  margin: 8px;
+}
+header #bars .sub_menu li a i.fa-angle-down {
+  margin-left: 170px;
+}
+header #bars .sub_menu li .icon {
+  text-align: center;
+}
+header #bars .sub_menu .sub_product {
+  display: none;
+}
+header #bars .sub_menu .sub_product.active {
+  display: block;
+}
+header #bars .sub_menu .sub_product li {
+  font-size: 16px;
+  padding: 12px 12px 12px 42px;
+}
+
+/*title*/
+.title {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.title article {
+  position: absolute;
+  top: 5vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.title article img {
+  position: absolute;
+  top: 15vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  width: 500px;
+  z-index: 3;
+}
+.title article h2 {
+  font: 60px/1 "Racing Sans One";
+  display: flex;
+  justify-content: center;
+  color: var(--color-orange);
+}
+.title article .bgtitle1 {
+  font: 200px/1 "Racing Sans One";
+  color: #c8c8c8;
+  position: absolute;
+  top: 15vh;
+  left: -40vh;
+}
+.title article .bgtitle2 {
+  font: 200px/1 "Racing Sans One";
+  color: #c8c8c8;
+  position: absolute;
+  top: 45vh;
+  left: 5vh;
+}
+.title article a {
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border-radius: 5px;
+  padding: 1vh;
+  position: absolute;
+  top: 80vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 20vw;
+  transition: 1s;
+  z-index: 3;
+}
+.title article a:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+/*# sourceMappingURL=custom_main.css.map */

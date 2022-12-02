@@ -1,0 +1,540 @@
+@import "reset";
+@import "footer";
+
+// Font
+// font-family: 'Bangers', cursive;
+// font-family: 'Racing Sans One', cursive;
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
+
+:root {
+  /* color */
+  --color-deep-black: #111;
+  --color-black: #3f454d;
+  --color-white: #fff;
+  --color-blue: #a6d1e6;
+  --color-yellow: #ffc54d;
+  --color-pink: #ff869e;
+  --color-grey: rgb(149, 146, 146);
+  --color-light-grey: #dfdfdf;
+  --color-dd: #f3eee1;
+  --color-orange: #ff6602;
+}
+
+/*Detail*/
+.details_page {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  font-family: "Racing Sans One";
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+
+  /*expand*/
+  .expand {
+    width: 40%;
+    height: 1000px;
+    background-color: #e9e9e9;
+    position: relative;
+    transition: 1.4s;
+
+    .name {
+      display: block;
+      margin: 60px;
+      font-size: 30px;
+      letter-spacing: 1px;
+      transition: 0.4s;
+    }
+
+    .bgimg_cus {
+      position: absolute;
+      left: 2vw;
+      display: inline-block;
+      color: var(--color-orange);
+      opacity: 0.65;
+      font: normal 300px/1 "Racing Sans One";
+    }
+
+    .bgimg_tom {
+      position: absolute;
+      top: 25vh;
+      right: -45vw;
+      display: inline-block;
+      color: #c8c8c8;
+      opacity: 0.65;
+      font: normal 300px/1 "Racing Sans One";
+    }
+
+    .img {
+      // will-change: transform;
+      position: fixed;
+      top: 20vh;
+      left: 8vw;
+      bottom: 180px;
+      width: 50vw;
+      z-index: 1;
+      // transition: 2s;
+
+      // //img자체가 아니라 img div에 넣어서 조정해야함
+      // &.on {
+      //   position: absolute;
+      //   top: 395px;
+      //   left: 8vw;
+      // }
+
+      img {
+        width: 75%;
+        z-index: 1;
+        margin-left: 10vw;
+      }
+    }
+
+    .add-cart {
+      // margin: 25px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 24vw;
+
+      .price {
+        position: fixed;
+        top: 82vh;
+        left: 5vw;
+
+        span {
+          font-size: 22px;
+        }
+
+        strong {
+          font-size: 32px;
+        }
+
+        //img자체가 아니라 img div에 넣어서 조정해야함
+        &.on {
+          position: absolute;
+          top: 820px;
+          left: 8vw;
+        }
+      }
+
+      a {
+        position: fixed;
+        top: 84vh;
+        left: 28vw;
+        cursor: pointer;
+        width: 120px;
+        height: 40px;
+        background-color: #000;
+        // background-color: #fec44c;
+        border-radius: 5px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        box-shadow: 5px 5px 10px rgba($color: #000, $alpha: 0.2);
+
+        //img자체가 아니라 img div에 넣어서 조정해야함
+        &.on {
+          position: absolute;
+          top: 850px;
+          // left: 8vw;
+        }
+      }
+    }
+  }
+
+  /*details*/
+  .details_hiddenbox {
+    position: absolute;
+    top: 10vh;
+    // bottom: 10vh;
+    right: -40vh;
+    width: 70%;
+
+    .details {
+      position: relative;
+      font: normal 14px/1 "arial";
+      width: 60%;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+      overflow-y: scroll;
+
+      .inner {
+        position: absolute;
+        top: 5vh;
+        margin-left: 14vw;
+        width: 30vw;
+
+        > div {
+          margin: 40px;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .title {
+          font: bold 18px/1 "airal";
+
+          i{
+            font-size: 16px;
+          }
+        }
+
+        .inputlist {
+          cursor: pointer;
+          border: 1px solid #000;
+          height: 30px;
+          position: relative;
+          // transition: 4s;
+
+          .placeholder {
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            transform: translate(-50%, 0);
+            color: #888;
+          }
+
+          i {
+            position: absolute;
+            top: 50%;
+            right: 2%;
+            transform: translate(-50%, -50%);
+          }
+          .sub_list {
+            display: none;
+
+            &.active {
+              display: block;
+              z-index: 3;
+              position: absolute;
+              top: 30px;
+              left: -1px;
+
+              li {
+                padding: 2vh;
+                border: 1px solid #777;
+                width: 22.4vw;
+                background-color: var(--color-white);
+                transition: 1s;
+
+                &:not(:first-child) {
+                  border-top: none;
+                }
+
+                &:hover {
+                  background-color: var(--color-deep-black);
+                  a {
+                    color: #fff;
+                  }
+                }
+
+                a {
+                  color: var(--color-deep-black);
+
+                  &:hover {
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .more {
+          display: none;
+          font: normal 12px/1 "airal";
+        }
+
+        .num {
+          padding-right: 30px;
+          align-items: center;
+          height: 7vh;
+
+          .count {
+            display: flex;
+            align-items: center;
+
+            a {
+              cursor: pointer;
+              color: #000;
+              font-size: 26px;
+              opacity: 0.7;
+            }
+
+            span {
+              display: inline-block;
+              width: 30px;
+              height: 30px;
+              text-align: center;
+              line-height: 30px;
+              margin: 0px 8px;
+            }
+          }
+        }
+
+        .color {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          position: relative;
+
+          .inputbox {
+            display: inline-block;
+            position: absolute;
+            top: -1vh;
+            left: 16vh;
+            width: 25px;
+            height: 25px;
+            outline: none;
+            font-size: 16px;
+            padding: 0 10px;
+            border: 1px solid #777;
+            border-radius: 50%;
+            box-sizing: border-box;
+            background-color: #fff;
+            box-sizing: border-box;
+          }
+
+          .color_select {
+            // display: flex;
+            // flex-direction: column;
+            justify-content: center;
+            margin-top: 4vh;
+            width: 100%;
+            height: 7vh;
+
+            .color_each {
+              margin-right: 10px;
+              display: inline-block;
+              width: 25px;
+              height: 25px;
+              border-radius: 50%;
+              text-align: center;
+              line-height: 30px;
+              border: 0.5px solid #555;
+              transition: 0.5s;
+
+              &:nth-child(1) {
+                background-color: #f36969;
+              }
+
+              &:nth-child(2) {
+                background-color: #ffbc3f;
+              }
+
+              &:nth-child(3) {
+                background-color: #ffff88;
+              }
+
+              &:nth-child(4) {
+                background-color: #6da26d;
+              }
+
+              &:nth-child(5) {
+                background-color: #55add8;
+              }
+
+              &:nth-child(6) {
+                background-color: #313159;
+              }
+
+              &:nth-child(7) {
+                background-color: #ba89ba;
+              }
+
+              &:nth-child(8) {
+                background-color: #404040;
+              }
+
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+
+        .emoji {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+
+          .inputbox_emoji {
+            position: absolute;
+            top: -1vh;
+            left: 18vh;
+            width: 10vw;
+            height: 4vh;
+            border: 0.5px solid #555;
+            border-radius: 3px;
+            box-sizing: border-box;
+            background-color: #fff;
+            //이모지 중앙정렬을 위해
+            text-align: center;
+            line-height: 4vh;
+
+            &:focus {
+              outline-color: #ff6602;
+            }
+          }
+
+          .emoji_select {
+            justify-content: center;
+            margin-top: 4vh;
+            width: 100%;
+            height: 7vh;
+
+            .emoji_each {
+              margin-right: 10px;
+              display: inline-block;
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              text-align: center;
+              line-height: 30px;
+              transition: 0.5s;
+
+              &:hover {
+                transform: scale(1.3);
+              }
+            }
+          }
+        }
+
+        .cart {
+          margin-bottom: 0px;
+          display: flex;
+          height: 8vh;
+
+          span {
+            width: 120px;
+            height: 50px;
+            // width: 100%;
+            margin-right: 10px;
+            border-radius: 2px;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid var(--color-deep-black);
+            background-color: var(--color-white);
+            transition: 1s;
+
+            &.item3 {
+              width: 60px;
+              background-color: #000;
+              color: #fff;
+              margin-right: 0px;
+
+              &:hover {
+                background-color: var(--color-white);
+                color: var(--color-deep-black);
+              }
+            }
+
+            &:hover {
+              background-color: var(--color-deep-black);
+              color: var(--color-white);
+            }
+          }
+        }
+
+        .buy {
+          border-radius: 1px;
+          margin: 8px 40px;
+          display: block;
+          height: 50px;
+          border: 1px solid #000;
+          text-align: center;
+          line-height: 50px;
+          transition: 1s;
+
+          &:hover {
+            background-color: var(--color-deep-black);
+            color: var(--color-white);
+          }
+        }
+
+        .naver {
+          margin-left: 6vw;
+          margin-top: 12px;
+          border-top: 2px solid #000;
+          padding: 8px;
+          width: 65%;
+          display: flex;
+
+          .logo_item {
+            padding-top: 4px;
+            width: 100px;
+            margin-right: 10px;
+            font-size: 10px;
+
+            .logo {
+              color: #1fcd63;
+              font-weight: bolder;
+            }
+          }
+
+          .npay {
+            width: 130px;
+            height: 37px;
+            text-align: center;
+            line-height: 37px;
+            border: 1px solid #777;
+            background-color: #1fcd63;
+            color: #fff;
+            margin-right: 10px;
+          }
+
+          .get {
+            width: 43px;
+            height: 37px;
+            text-align: center;
+            line-height: 37px;
+            color: #1fcd63;
+            border: 1px solid #777;
+            background-color: #fff;
+          }
+        }
+
+        .nav_more {
+          margin-top: 50px;
+          display: flex;
+          justify-content: space-between;
+
+          ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            a {
+              font: 12px/1 "arial";
+              color: #000;
+
+              li {
+                padding-right: 18px;
+              }
+
+              &:not(:last-child) {
+                border-right: 1px solid #666;
+              }
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    position: absolute;
+    top: 900px; //높이값 160
+    width: 100%;
+  }
+}

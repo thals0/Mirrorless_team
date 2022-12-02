@@ -1,0 +1,547 @@
+@charset "utf-8";
+@import "reset";
+
+// Font
+// font-family: 'Bangers', cursive;
+// font-family: 'Racing Sans One', cursive;
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
+
+@font-face {
+  font-family: "MICEGothic Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  /* color */
+  --color-deep-black: #111;
+  --color-black: #3f454d;
+  --color-white: #fff;
+  --color-blue: #a6d1e6;
+  --color-yellow: #ffc54d;
+  --color-pink: #ff869e;
+  --color-grey: rgb(149, 146, 146);
+  --color-light-grey: #dfdfdf;
+  --color-dd: #f3eee1;
+  --color-orange: #ff6602;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  // overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  font: normal 16px/1 "Racing Sans One";
+
+  &.on {
+    display: none;
+  }
+
+  .main_header {
+    margin: 0;
+    z-index: 4;
+    // background-color: #fff;
+    width: 97%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dfdfdf;
+    transition: 1.4s;
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      a.name {
+        color: black;
+        font-size: 40px;
+      }
+      a.icon {
+        margin-left: 8px;
+        font-size: 30px;
+      }
+    }
+    nav {
+      ul {
+        display: flex;
+        li {
+          margin: 0px 16px;
+          cursor: pointer;
+          a {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+// main
+.mainbox {
+  width: 85%;
+  height: 30vh;
+  background-color: var(--color-orange);
+  margin: auto;
+  position: relative;
+  top: 6vh;
+  // left: 50%;
+  // transform: translate(-50%, 0);
+  border-radius: 9px;
+}
+
+.titles {
+  position: absolute;
+  display: flex;
+  top: 37vh;
+  left: 10%;
+  // transform: translate(-50%, 0);
+
+  .title {
+    z-index: 2;
+    font: 70px/1 "Racing Sans One";
+    margin-left: 60px;
+  }
+
+  .sub_title {
+    font: 20px/1 "arial";
+    color: var(--color-grey);
+    position: absolute;
+    top: 25vh;
+    left: 5vw;
+  }
+
+  i {
+    font: 80px/1 "Racing Sans One";
+    margin-left: 70px;
+  }
+
+  img {
+    position: absolute;
+    top: -15vh;
+    left: 50vw;
+    width: 60%;
+  }
+}
+
+/*기획의도*/
+article.intention {
+  position: relative;
+  top: 40vh;
+  left: 10vw;
+  display: flex;
+
+  div {
+    img {
+      position: absolute;
+      top: 7vh;
+      // opacity: .9;
+      width: 35%;
+      border-radius: 10px;
+      z-index: 2;
+    }
+
+    // .intention_bg{
+    //   position: absolute;
+    //   top: 5vh;
+    //   left: -10vw;
+    //   width: 100vw;
+    //   height: 50vh;
+    //   background-color: rgb(228, 226, 226);
+    // }
+  }
+
+  div {
+    .about_title {
+      position: absolute;
+      top: 8vh;
+      margin-left: 40vw;
+      font: 50px/1 "Racing Sans One";
+      z-index: 2;
+    }
+
+    .about_content {
+      position: absolute;
+      top: 12vh;
+      right: 18vw;
+      width: 60vw;
+      height: 40vh;
+      background-color: #e9dcd4;
+      border-radius: 3px;
+
+      span {
+        position: absolute;
+        font: 17px/1 "MICEGothic Bold";
+        letter-spacing: 0.5px;
+        margin-left: 15vw;
+        z-index: 2;
+      }
+
+      span:nth-of-type(1) {
+        top: 8vh;
+      }
+
+      span:nth-of-type(2) {
+        top: 20vh;
+        font: 14px/1.2 "arial";
+      }
+
+      span:nth-of-type(3) {
+        top: 30vh;
+        font: 14px/1.2 "arial";
+      }
+    }
+  }
+}
+
+/*인식한 문제*/
+article.problem {
+  position: relative;
+  font: 140px/1 "MICEGothic Bold";
+
+  .collabo_content {
+    // 전체 div박스 공통
+    div:not(:nth-of-type(4)) {
+      width: 35%;
+      height: 75%;
+      left: 10vw;
+      background-color: #e9dcd4;
+      border-radius: 5px;
+
+      .collabo_content_title {
+        font: 700 22px/1 "MICEGothic Bold";
+        position: absolute;
+        top: 3vh;
+        left: 3vh;
+      }
+
+      .collabo_content_text {
+        font: 15px/1.2 "arial";
+        position: absolute;
+        top: 15vh;
+        left: 5vh;
+      }
+    }
+
+    div:nth-of-type(1) {
+      position: absolute;
+      top: 110vh;
+
+      img {
+        position: absolute;
+        top: -4vh;
+        right: -4vw;
+        width: 60%;
+      }
+    }
+
+    div:nth-of-type(2) {
+      position: absolute;
+      top: 150vh;
+
+      img {
+        position: absolute;
+        top: -2vh;
+        right: -0.5vw;
+        width: 45%;
+      }
+    }
+
+    div:nth-of-type(3) {
+      position: absolute;
+      top: 190vh;
+
+      img {
+        position: absolute;
+        top: -3vh;
+        right: -5vw;
+        width: 70%;
+      }
+
+      span {
+        position: absolute;
+        top: 2vh;
+        font: 10px/1 "arial";
+      }
+    }
+
+    //orage색 원형
+    div:nth-of-type(4) {
+      position: absolute;
+      top: 180vh;
+      right: 10vw;
+      width: 20%;
+      height: 70%;
+      background-color: var(--color-orange);
+      border-radius: 50% 50% 0 50%;
+
+      img {
+        width: 95%;
+      }
+    }
+  }
+
+  .collabo_titile {
+    font: 140px/1 "Racing Sans One";
+
+    span:nth-of-type(1) {
+      position: absolute;
+      top: 127vh;
+      right: 23vw;
+    }
+
+    span:nth-of-type(2) {
+      position: absolute;
+      top: 155vh;
+      right: 10vw;
+    }
+
+    span:nth-of-type(3) {
+      position: absolute;
+      top: 185vh;
+      right: 27vw;
+    }
+  }
+}
+
+// 우리팀
+/* WRAP */
+.ourteam {
+  display: flex;
+  justify-content: left;
+  position: relative;
+
+  // .team_bg {
+  //   position: absolute;
+  //   top: 300vh;
+  //   left: 6vw;
+  //   transform: rotate(-5deg);
+  //   font: 270px/1 "Racing Sans One";
+  //   color: #e9e9e9;
+  // }
+  .whoweare {
+    position: absolute;
+    top: 195vh;
+    width: 45%;
+    right: 11vw;
+    padding: 20px;
+    background-color: #ff6602;
+    text-align: right;
+    border-radius: 5px;
+    font: bold 50px/1 "Racing Sans One";
+  }
+
+  section.wrap {
+    position: relative;
+    top: 215vh;
+    left: 10vw;
+    margin-left: 12px;
+    width: 370px;
+    padding: 30px 0;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+
+    article.profile {
+      width: 100%;
+      text-align: center;
+      margin-top: 10;
+
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        // box-shadow:5px 15px 30px rgb(255, 102, 2, .5);
+      }
+
+      h1 {
+        font: bold 40px/1 "Racing Sans One";
+        color: #000;
+        margin: 20px 0px 10px 0px;
+      }
+
+      p {
+        font: bold 20px/1 "Racing Sans One";
+        color: #999;
+        margin-bottom: 20px;
+      }
+    }
+
+    // 맡은 파트
+    .part {
+       height: 245px;
+      span {
+        display: block;
+        width: 180px;
+        height: 32px;
+        margin: 0px auto 20px;
+        color: #fff;
+        background-color: #333;
+        font: bold 20px/1.3 "Racing Sans One";
+        border-radius: 16px;
+        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+        // text-shadow: 0px 0px 5px rgba(255, 255, 255, .6);
+        letter-spacing: 1px;
+      }
+
+      li {
+        text-align: center;
+        font: 16px/1 "MICEGothic Bold";
+        padding: 10px;
+        // height: 40px;
+        margin-bottom: 10px;
+        // border-bottom: 1px solid #888;
+      }
+    }
+
+    // 기술 스택
+    .stacks {
+      padding: 15px 0;
+
+      .stack_title {
+        display: block;
+        width: 180px;
+        height: 32px;
+        margin: 0px auto 20px;
+        color: #fff;
+        background-color: #333;
+        font: bold 20px/1.3 "Racing Sans One";
+        border-radius: 16px;
+        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+        // text-shadow: 0px 0px 5px rgba(255, 255, 255, .6);
+        letter-spacing: 1px;
+      }
+
+      .stack {
+        font: 16px/3 "MICEGothic Bold";
+
+        &:not(:last-child)::after {
+          content: "|";
+          margin: 0 15px;
+        }
+      }
+    }
+
+    .contact {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      font: 20px/1 "arial";
+
+      a {
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #000;
+        transition: 1s;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+/*footer*/
+footer {
+  position: absolute;
+  top: 425vh;
+  width: 100%;
+  padding: 4vh 0 1vh 0;
+  margin-top: 6vh;
+  background-color: #333;
+  color: #fff;
+
+  .inner {
+    .agreement {
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      li {
+        font: 10px/1 "arial";
+        justify-content: center;
+        padding: 10px;
+
+        &:last-child {
+          margin-right: none;
+        }
+
+        &:not(:nth-child(1))::before {
+          content: "|";
+          color: #c8c8c8;
+          margin-right: 10px;
+        }
+
+        a {
+          color: #c8c8c8;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .btns {
+      display: flex;
+      margin-top: 1.5vh;
+      justify-content: center;
+
+      li {
+        font: 10px/1 "arial";
+
+        a {
+          text-align: center;
+          display: block;
+          width: 100px;
+          color: #fff;
+          padding: 0.7vh;
+          border: 1px solid #fff;
+          border-radius: 3px;
+          margin-left: 30px;
+          transition: 1s;
+
+          &:hover {
+            background-color: #fff;
+            color: #333;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .company_contents {
+      display: flex;
+      font: 10px/1 "arial";
+      padding: 3vh 0 0 0;
+      justify-content: center;
+      color: #c8c8c8;
+
+      li {
+        margin-left: 20px;
+
+        &:last-child {
+          margin-left: none;
+        }
+      }
+    }
+
+    p {
+      padding: 2vh 0;
+      font: 10px/1 "arial";
+      margin-left: 10px;
+      text-align: center;
+      color: #c8c8c8;
+    }
+  }
+}
