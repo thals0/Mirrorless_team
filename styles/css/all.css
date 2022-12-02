@@ -1,0 +1,58 @@
+.all-products {
+  margin-top: 30px;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.all-products .title {
+  margin: 40px;
+  font: bold 28px/1 "arial";
+}
+.all-products .container {
+  width: 100%;
+  height: 100%;
+}
+.all-products .container .items {
+  margin: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.all-products .container .items .item {
+  margin: 30px;
+}
+.all-products .container .items .item a {
+  color: #000;
+}
+.all-products .container .items .item .img {
+  width: 15vw;
+  height: 15vw;
+}
+.all-products .container .items .item .img img {
+  width: 100%;
+  transition: 0.4s;
+}
+.all-products .container .items .item .img img:hover {
+  transform: scale(1.3);
+}
+.all-products .container .items .item .img img.general {
+  margin: 20px;
+  width: 60%;
+}
+.all-products .container .items .item .img img.camcoder1 {
+  margin-top: 30px;
+  margin-right: 12px;
+}
+.all-products .container .items .item .info .name {
+  font: bold 20px/1 "arial";
+  margin-bottom: 8px;
+}
+.all-products .container .items .item .info .name:hover {
+  text-decoration: underline;
+}
+.all-products .container .items .item .info .price {
+  font: normal 18px/1 "arial";
+}/*# sourceMappingURL=all.css.map */
